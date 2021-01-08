@@ -1,23 +1,36 @@
-" File: ~/.config/nvim/init.vim
+call plug#begin('~/.config/nvim/plugins')
+        Plug 'scrooloose/nerdtree'
+        Plug 'junegunn/goyo.vim'
+        Plug 'tpope/vim-surround'
+        Plug 'dhruvasagar/vim-table-mode'
+        Plug 'nanotech/jellybeans.vim'
+        Plug 'bignimbus/pop-punk.vim'
+call plug#end()
 
 " Some basics:
+	set clipboard=unnamedplus
 	let mapleader =","
-	map <CapsLock> <Esc>
-	set laststatus=2 ruler rulerformat=%l,%v
 	set nocompatible nohlsearch
 	filetype plugin on
 	syntax on
-	set listchars=tab:»·,extends:›,precedes:·,space:·
+	set listchars=tab:»\ ,extends:⟩,precedes:⟨,space:·,trail:•
 	set sw=4 sts=4 ts=4 noet
 	set splitbelow splitright
 	set history=1000 undolevels=1000
 	set notimeout ttimeout
-	set wildmenu
 	set scrolloff=10
-	colorscheme jellybeans
+	set list
+	" colorscheme jellybeans
+	colorscheme pop-punk
+
+" Change cursor settings
+	highlight Cursor guibg=green guifg=white
 
 " Enable autocompletion:
 	set wildmode=longest,list,full
+
+" Change the color of whitespace characters to me darker
+	highlight NonText ctermfg=8
 
 " Disables automatic commenting on newline:
 	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -54,6 +67,10 @@
 	
 	" Use ctrl+l to correct spelling on the fly
 	inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+
+" Vim settings for using buffers
+	nnoremap ,ev :e ~/.config/nvim/init.
+	nnoremap ,eb :e ~/.bashrc
 
 " Changes for specific files types
 	autocmd filetype php		set filetype=html

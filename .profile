@@ -3,7 +3,7 @@
 # SHELL
 # =====
 	export LSCOLORS="EHfxcxdxBxegecabagacad"
-	umask 022
+	umask 022	# This is just a WSL thing
 
 # APPLICATIONS
 # ============

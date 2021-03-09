@@ -32,6 +32,11 @@
 # Application modifications
 # ==========================
 
+    # Alias for modifying application launches
+    alias   vi="nvim" \
+            vim="nvim" \
+            e="nvim"
+
     # Aliases for saving a few key presses off ls commands
     alias   ls="ls --color=auto" \
             ll="ls -l" \

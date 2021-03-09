@@ -11,6 +11,7 @@ call plug#end()
 " Some basics:
     set exrc
     set spell
+    set vb t_vb=
     set nohlsearch
     set undodir=~/.vim/undodir
     set undofile
@@ -26,25 +27,29 @@ call plug#end()
     set notimeout ttimeout
     set scrolloff=10
     set list
+    set t_Co=256
     set noswapfile
     set noerrorbells
     set wildmode=longest,list,full
 
 " HIGHLIGHT SETTINGS AND COLOR SCHEMES:
-    " Add Highlight to anyline that exceeds 80 characters
+    " Add Highlight to any line that exceeds 80 characters
     highlight OverLength ctermbg=red ctermfg=white guibg=#592929
     match OverLength /\%81v.\+/
 
-    " colorscheme jellybeans
+    " Color scheme jellybeans
     colorscheme pop-punk
 
     " Change cursor settings
     highlight Cursor guibg=green guifg=white
 
-    " Change the color of whitespace characters to me darker
+    " Change the color of white space characters to me darker
     highlight NonText ctermfg=8
 
-    " Set background transperent
+    " Fix comment highlighting for terminal not supporting italics
+    highlight Comment cterm=none
+
+    " Set background transparent
     hi Normal guifg=#44cc44 guibg=NONE ctermbg=none
 
 " BUFFER COMMANDS:
@@ -80,7 +85,7 @@ call plug#end()
     " Change movements will wrapped and long lines
     map j gj
     map k gk
-    
+
     " Use ctrl+l to correct spelling on the fly
     inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 

@@ -1,5 +1,9 @@
  # ~/.bashrc
 
+export GPG_TTY=$(tty)
+export EDITOR=vim
+export VISUAL=$EDITOR
+
 HISTCONTROL=ignoreboth
 shopt -s histappend
 HISTSIZE=1000

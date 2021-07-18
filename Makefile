@@ -6,3 +6,4 @@ update:
 	cp ~/.vim/vimrc .
 	cp ~/.aliases .
 	cp ~/.zshrc .
+	cp ~/.zprofile .

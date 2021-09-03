@@ -18,6 +18,7 @@
 # ====================
     alias   cdb="cd ~/bin" \
             cdd="cd ~/dev/personal/dotfiles" \
+            cdw="cd ~/wiki" \
             cdv="cd ~/.config/$EDITOR" \
             cfh="cd ~"
 

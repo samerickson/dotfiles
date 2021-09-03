@@ -1,3 +1,4 @@
+
 call plug#begin('~/.config/nvim/plugins')
     Plug 'scrooloose/nerdtree'
     Plug 'jacoborus/tender.vim'

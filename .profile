@@ -7,6 +7,6 @@
 
 # APPLICATIONS
 # ============
-    export EDITOR="nvim"
+    export EDITOR="vim"
 
 PATH="$HOME/.local/bin:$PATH"

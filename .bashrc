@@ -1,28 +1,18 @@
-# ~/.bashrc
+# .bashrc
 
-export GPG_TTY=$(tty)
-export EDITOR=vim
-export VISUAL=$EDITOR
-
-HISTCONTROL=ignoreboth
-shopt -s histappend
-HISTSIZE=1000
-HISTFILESIZE=2000
-
-shopt -s checkwinsize
-
-# WSL settings to allow for X11 forwarding to windows
-    export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
-    export LIBGL_ALWAYS_INDIRECT=1
-
-export PS1="\[\e[0;33m\]\t \[\e[0;32m\]\h \[\e[0;36m\]\w \[\033[00m\]$ "
-
-# Load system aliases
-if [ -f ~/.aliases ]; then
-    . ~/.aliases
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
 fi
 
-PATH="$HOME/.local/bin:$PATH"
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
 
-export MOVIES_DIR=/mnt/d/movies
-export PUBLIC_DIR=/home/erickssb/github/movies-project/client/public
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions

@@ -1,12 +1,13 @@
 
-call plug#begin('~/.config/nvim/plugins')
+call plug#begin('~/.vim/plugins')
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+    Plug 'lucasprag/simpleblack'
     Plug 'scrooloose/nerdtree'
-    Plug 'jacoborus/tender.vim'
     Plug 'junegunn/goyo.vim'
     Plug 'tpope/vim-surround'
     Plug 'dhruvasagar/vim-table-mode'
-    Plug 'nanotech/jellybeans.vim'
-    Plug 'bignimbus/pop-punk.vim'
+    Plug 'vimwiki/vimwiki'
 call plug#end()
 
 " Some basics:
@@ -38,8 +39,7 @@ call plug#end()
     highlight OverLength ctermbg=red ctermfg=white guibg=#592929
     match OverLength /\%81v.\+/
 
-    " Color scheme jellybeans
-    colorscheme pop-punk
+    colorscheme simpleblack
 
     " Change cursor settings
     highlight Cursor guibg=green guifg=white
@@ -51,7 +51,6 @@ call plug#end()
     highlight Comment cterm=none
 
     " Set background transparent
-    hi Normal guifg=#44cc44 guibg=NONE ctermbg=none
 
 " BUFFER COMMANDS:
 " Disables automatic commenting on newline:
@@ -93,6 +92,14 @@ call plug#end()
 " Vim settings for using buffers
     nnoremap ,ev :e ~/.config/nvim/init.
     nnoremap ,eb :e ~/.bashrc
+    map gn :bn<cr>
+    map gp :bp<cr>
+    map gd :bd<cr>
+
+" Vimwiki settings
+    " Use markdown syntax
+    let g:vimwiki_list = [{'path': '~/wiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
 
 " AUTOCOMMANDS:
 " Changes for specific files types

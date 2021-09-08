@@ -31,7 +31,8 @@
 # ====================
     alias   cdb="cd ~/.local/bin" \
             cdv="cd ~/.config/vim" \
-            cfh="cd ~"
+            cfh="cd ~" \
+            cdd="cd ~/.dotfiles"
 
 # Frequent Files
 # ==============
@@ -39,7 +40,7 @@
             cfa="vim ~/.aliases" \
             cfz="vim ~/.zshrc" \
             cfp="vim ~/.profile" \
-            cfv="vim ~/.vim/vimrc" \
+            cfv="vim ~/.vimrc" \
             cfs="vim ~/.ssh/config"
 
 # Misc

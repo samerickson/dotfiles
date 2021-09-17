@@ -1,4 +1,4 @@
-# ~/.aliases
+# ~/.aliases.sh
 
 # Windows machine aliases
 # =======================
@@ -37,7 +37,7 @@
 # Frequent Files
 # ==============
     alias   cfb="vim ~/.bashrc" \
-            cfa="vim ~/.aliases" \
+            cfa="vim ~/.dotfiles/aliases.sh" \
             cfz="vim ~/.zshrc" \
             cfp="vim ~/.profile" \
             cfv="vim ~/.vimrc" \
@@ -46,3 +46,23 @@
 # Misc
 # ====
     alias   gs="gss"
+
+# Functions
+# =========
+
+# Show most frequently used commands
+#   Taken from:
+#       https://github.com/trimstray/the-book-of-secret-knowledge#tool-terminal
+histdata() {
+    history | \
+    awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | \
+    grep -v "./" | \
+    column -c3 -s " " -t | \
+    sort -nr | nl |  head -n 20
+}
+
+# Backup file
+back() { cp $1{,.backup}; }
+
+# Cd into a directory then list its contents
+cs() { cd "$1" && ls; }

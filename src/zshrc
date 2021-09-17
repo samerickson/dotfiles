@@ -1,6 +1,6 @@
 # ~/.zshrc
 
-source ~/.aliases
+source ~/.dotfiles/src/aliases.sh
 
 # oh-my-zsh Settings:
 # ===================
@@ -22,9 +22,7 @@ export ZSH="/home/$USER/.oh-my-zsh"
 #ZSH_THEME="aussiegeek"
 ZSH_THEME="flazz"
 
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
 DISABLE_UNTRACKED_FILES_DIRTY="true"
-plugins=(git tmux zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh

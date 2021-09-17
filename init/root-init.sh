@@ -53,12 +53,8 @@ chsh "${USERNAME}" -s /usr/bin/zsh
 git clone https://github.com/samerickson/dotfiles.git "/home/${USERNAME}/.dotfiles"
 
 # Install dotfiles
-cd "/home/${USERNAME}/.dotfiles/src/home"
-for FILE in .*; do
-    if [ -f "${FILE}"]; then
-        ln -sfv "${FILE}" "/home/${USERNAME}/${FILE}"
-    fi
-done
+bash "/home/${USERNAME}.dotfiles/.env"
+bash "/home/${USERNAME}/.dotfiles/init/intsall.sh"
 
 # Alert user if machine requires reboot
 if [ -f /var/run/reboot-required ]; then

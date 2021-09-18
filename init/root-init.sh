@@ -18,6 +18,7 @@ chmod 0600 "/home/${USERNAME}/.ssh/*"
 #   https://askubuntu.com/questions/1349884/how-to-disable-pending-kernel-upgrade-message
 apt update && apt full-upgrade -y --auto-remove
 apt install -y \
+    make \
     unzip \
     zsh \
     whois \

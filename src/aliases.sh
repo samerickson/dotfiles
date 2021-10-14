@@ -38,7 +38,7 @@
 # ==============
     alias   cfb="vim ~/.bashrc" \
             cfa="vim ~/.dotfiles/src/aliases.sh" \
-            cfz="vim ~/.config/zshrc" \
+            cfz="vim ~/.config/zsh/zshrc" \
             cfp="vim ~/.profile" \
             cfv="vim ~/.vim/vimrc" \
             cfs="vim ~/.ssh/config"

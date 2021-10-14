@@ -16,7 +16,7 @@ mkdir -p "${HOME}/.backup-dotfiles"
 ln -sfv "${DOTFILES:-$HOME/.dotfiles}/src/profile" "${HOME}/.profile"
 ln -sfv "${DOTFILES:-$HOME/.dotfiles}/src/profile" "${HOME}/.zprofile"
 ln -sfv "${DOTFILES:-$HOME/.dotfiles}/src/bashrc" "${HOME}/.bashrc"
-ln -sfv "${DOTFILES:-$HOME/.dotfiles}/src/vimrc" "${HOME}/.vim/vimrc"
+ln -sfv "${DOTFILES:-$HOME/.dotfiles}/src/vimrc" "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/init.vim"
 ln -sfv "${DOTFILES:-$HOME/.dotfiles}/src/tmux.conf" "${HOME}/.tmux.conf"
 
 mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}/zsh"

@@ -1,6 +1,7 @@
 # ~/.zshrc
 
 source ~/.dotfiles/src/aliases.sh
+[ -z "$ZDOTDIR" ] && source ~/.profile
 
 # oh-my-zsh Settings:
 # ===================

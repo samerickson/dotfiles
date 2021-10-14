@@ -37,10 +37,10 @@
 # Frequent Files
 # ==============
     alias   cfb="vim ~/.bashrc" \
-            cfa="vim ~/.dotfiles/aliases.sh" \
-            cfz="vim ~/.zshrc" \
+            cfa="vim ~/.dotfiles/src/aliases.sh" \
+            cfz="vim ~/.config/zshrc" \
             cfp="vim ~/.profile" \
-            cfv="vim ~/.vimrc" \
+            cfv="vim ~/.vim/vimrc" \
             cfs="vim ~/.ssh/config"
 
 # Misc

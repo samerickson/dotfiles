@@ -31,8 +31,8 @@ call plug#end()
 
 " HIGHLIGHT SETTINGS AND COLOR SCHEMES:
     " Add Highlight to any line that exceeds 80 characters
-    highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-    match OverLength /\%81v.\+/
+    " highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+    " match OverLength /\%81v.\+/
 
     " Color scheme jellybeans
     colorscheme pop-punk

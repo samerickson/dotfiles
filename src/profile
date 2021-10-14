@@ -3,6 +3,8 @@
 # Required for WSL to set normal permissions by default
 umask 022
 
+export PATH="$PATH:$HOME/.local/bin"
+
 # Dictates which colors are used for which filetypes while using ls
 export LSCOLORS="EHfxcxdxBxegecabagacad"
 

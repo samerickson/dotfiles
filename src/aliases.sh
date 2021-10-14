@@ -17,8 +17,9 @@
 # =================
     # TODO: change source file depending on which shell is being used
     alias   mx="chmod +x" \
-            src="source ~/.zshrc" \
-            delswap="trash ~/.local/share/nvim/swap/*; echo 'Cleaned up nvim swap files'"
+            src="source ${ZDOTDIR:-$HOME}/.zshrc" \
+            delswap="trash ~/.local/share/nvim/swap/*; echo 'Cleaned up nvim swap files'" \
+            cu="check_update.sh"
 
 # Adding colors
 # =============
@@ -36,12 +37,12 @@
 
 # Frequent Files
 # ==============
-    alias   cfb="vim ~/.bashrc" \
-            cfa="vim ~/.dotfiles/src/aliases.sh" \
-            cfz="vim ~/.config/zsh/zshrc" \
-            cfp="vim ~/.profile" \
-            cfv="vim ~/.vim/vimrc" \
-            cfs="vim ~/.ssh/config"
+    alias   cfb="$EDITOR ~/.bashrc" \
+            cfa="$EDITOR ~/.dotfiles/src/aliases.sh" \
+            cfz="$EDITOR ~/.config/zsh/zshrc" \
+            cfp="$EDITOR ~/.profile" \
+            cfv="$EDITOR ~/.vim/vimrc" \
+            cfs="$EDITOR ~/.ssh/config"
 
 # Misc
 # ====

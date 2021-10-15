@@ -39,7 +39,7 @@
 # ==============
     alias   cfb="${EDITOR:-vim} ~/.bashrc" \
             cfa="${EDITOR:-vim} ~/.dotfiles/src/aliases.sh" \
-            cfz="${EDITOR:-vim} ~/.config/zsh/zshrc" \
+            cfz="${EDITOR:-vim} ~/.config/zsh/.zshrc" \
             cfp="${EDITOR:-vim} ~/.profile" \
             cfv="${EDITOR:-vim} ~/.vim/vimrc" \
             cfs="${EDITOR:-vim} ~/.ssh/config"

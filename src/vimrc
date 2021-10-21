@@ -1,6 +1,9 @@
 call plug#begin('~/.config/nvim/plugins')
     Plug 'scrooloose/nerdtree'
     Plug 'junegunn/goyo.vim'
+    Plug 'junegunn/fzf.vim'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    "Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
     Plug 'tpope/vim-surround'
     Plug 'bignimbus/pop-punk.vim'
 call plug#end()

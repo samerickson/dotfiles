@@ -67,3 +67,6 @@ back() { cp $1{,.backup}; }
 
 # Cd into a directory then list its contents
 cs() { cd "$1" && ls; }
+
+# Create a directory and cd into it
+mds() { mkdir "$1" && cd "$1"; }

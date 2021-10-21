@@ -61,3 +61,4 @@ git_prompt() {
 # Set BASH prompt
 PS1='\[$WHITE\]\h \[$BOLD$MAGENTA\]:: \[$RESET$CYAN\w`git_prompt`\] \[$GREEN\]$ \[$RESET\]'
 
+exec zsh

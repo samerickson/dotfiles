@@ -9,7 +9,8 @@ export PATH="$PATH:$HOME/.local/bin"
 export LSCOLORS="EHfxcxdxBxegecabagacad"
 
 export TERM="xterm-256color"
-export EDITOR="nvim"
+
+[ -x $(command -v nvim) ] && export EDITOR="vim" || export EDITOR="nvim"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"

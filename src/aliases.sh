@@ -37,12 +37,12 @@
 
 # Frequent Files
 # ==============
-    alias   cfb="$EDITOR ~/.bashrc" \
-            cfa="$EDITOR ~/.dotfiles/src/aliases.sh" \
-            cfz="$EDITOR ~/.config/zsh/zshrc" \
-            cfp="$EDITOR ~/.profile" \
-            cfv="$EDITOR ~/.vim/vimrc" \
-            cfs="$EDITOR ~/.ssh/config"
+    alias   cfb="${EDITOR:-vim} ~/.bashrc" \
+            cfa="${EDITOR:-vim} ~/.dotfiles/src/aliases.sh" \
+            cfz="${EDITOR:-vim} ~/.config/zsh/.zshrc" \
+            cfp="${EDITOR:-vim} ~/.profile" \
+            cfv="${EDITOR:-vim} ~/.vim/vimrc" \
+            cfs="${EDITOR:-vim} ~/.ssh/config"
 
 # Misc
 # ====

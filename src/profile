@@ -19,3 +19,8 @@ export LESSHISTFILE="-"
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
 export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
+
+if [ "$SHELL" != "/bin/zsh" ]; then
+    export SHELL="/bin/zsh"
+    exec /bin/zsh -l
+fi

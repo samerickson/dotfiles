@@ -14,4 +14,5 @@ ZSH_THEME="flazz"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
+source $DOTFILES/shell/aliases
 source $ZSH/oh-my-zsh.sh

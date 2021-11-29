@@ -1,18 +1,5 @@
 # ~/.aliases.sh
 
-# Windows machine aliases
-# =======================
-    # Go to Windows directories
-    alias   win="cd /mnt/c/Users/erick" \
-            wind="cd /mnt/f/Downloads" \
-            winf="cd /mnt/f" \
-            wind="cd /mnt/d" \
-            winc="cd /mnt/c" \
-            open="wslview" \
-            chrome="/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe" \
-            ic="/mnt/c/Users/erick/iCloudDrive" \
-            ob="/mnt/c/Users/erick/iCloudDrive/iCloud~md~obsidian/Obsidian"
-
 # System management
 # =================
     # TODO: change source file depending on which shell is being used

@@ -1,7 +1,6 @@
 call plug#begin('~/.config/nvim/plugins')
     Plug 'scrooloose/nerdtree'
     Plug 'vim-scripts/DoxygenToolkit.vim'
-    Plug 'junegunn/goyo.vim'
     Plug 'tpope/vim-surround'
     Plug 'bignimbus/pop-punk.vim'
 call plug#end()
@@ -29,6 +28,7 @@ call plug#end()
     set noswapfile
     set noerrorbells
     set wildmode=longest,list,full
+    set wildmenu
 
 " HIGHLIGHT SETTINGS AND COLOR SCHEMES:
     " Add Highlight to any line that exceeds 80 characters

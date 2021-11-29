@@ -1,0 +1,32 @@
+" Some basics:
+
+filetype plugin on
+syntax on
+let mapleader =","
+
+set statusline="%f%m%r%h%w [%Y] [0x%02.2B]%< %F%=%4v,%4l %3p%% of %L"
+set exrc
+set spell
+set vb t_vb=
+set nohlsearch
+set clipboard=unnamedplus
+set nocompatible nohlsearch
+set listchars=tab:»\ ,extends:⟩,precedes:⟨,space:·,trail:•
+set sw=4 sts=4 ts=4 noexpandtab
+set notimeout ttimeout
+set scrolloff=10 splitbelow splitright
+set list
+set t_Co=256
+set noerrorbells history=1000 undolevels=1000
+set wildmenu wildmode=longest,list,full
+
+set backupdir=/tmp//
+set directory=/tmp//
+set undodir=/tmp//
+
+" Load in sub-files
+source ~/.vim/plugins.vim
+source ~/.vim/theme.vim
+source ~/.vim/autocmd.vim
+source ~/.vim/keymap.vim
+

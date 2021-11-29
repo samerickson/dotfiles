@@ -24,3 +24,7 @@ if [ "$SHELL" != "/bin/zsh" ]; then
     export SHELL="/bin/zsh"
     exec /bin/zsh -l
 fi
+
+if [ -x "$(command -v cargo)" ]; then
+    source "$HOME/.cargo/env"
+fi

@@ -61,4 +61,10 @@ git_prompt() {
 # Set BASH prompt
 PS1='\[$WHITE\]\h \[$BOLD$MAGENTA\]:: \[$RESET$CYAN\w`git_prompt`\] \[$GREEN\]$ \[$RESET\]'
 
+# Work around for switching default shell on schools development server
 exec zsh
+
+# If cargo is installed source it
+if [ -x $(command -v cargo) ]; then
+    . "$HOME/.cargo/env"
+fi

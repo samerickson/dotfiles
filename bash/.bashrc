@@ -23,8 +23,8 @@ HISTFILESIZE=2000
 shopt -s checkwinsize
 
 # Source alias file if it exists
-[ ! -f "${HOME}/.dotfiles/aliases.sh" ] || \
-    source "${HOME}/.dotfiles/aliases.sh"
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliases" ] || \
+    source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliases}"
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"

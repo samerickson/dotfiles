@@ -14,11 +14,11 @@ ZSH_THEME="flazz"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
-if [ -x "$XDG_CONFIG_HOME/shell/aliases" ]; then
+if [ -f "$XDG_CONFIG_HOME/shell/aliases" ]; then
 	source $XDG_CONFIG_HOME/shell/aliases
 fi
 
 # If oh-my-zsh is installed, use it
-if [ -x "$ZSH/oh-my-zsh.sh" ]; then
+if [ -f "$ZSH/oh-my-zsh.sh" ]; then
 	source $ZSH/oh-my-zsh.sh
 fi

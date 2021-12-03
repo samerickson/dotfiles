@@ -19,7 +19,7 @@ alias	grep="grep --color=auto" \
 
 # Directory Navigation
 # ====================
-alias	cdb="cd ~/.local/bin" \
+alias	cdb="cd ${DOTFILES}/bin" \
 		cdv="cd ~/.config/vim" \
 		cfh="cd ~" \
 		cdd="cd ~/.dotfiles"
@@ -28,7 +28,8 @@ alias	cdb="cd ~/.local/bin" \
 # ==============
 
 alias	cfa="${EDITOR:-vim} ${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliases" \
-		cfz="${EDITOR:-vim} ${ZDOTDIR:-$HOME}/.zshrc" \
+		cfzc="${EDITOR:-vim} ${ZDOTDIR:-$HOME}/.zshrc" \
+		cfze="${EDITOR:-vim} ~/.zshenv" \
 		cfp="${EDITOR:-vim} ~/.profile" \
 		cfv="${EDITOR:-vim} ~/.vim/vimrc" \
 		cfs="${EDITOR:-vim} ~/.ssh/config"

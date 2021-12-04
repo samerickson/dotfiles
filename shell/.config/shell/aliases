@@ -8,7 +8,7 @@ alias	mx="chmod +x" \
 
 # Application modification
 # ========================
-alias tmux="tmux -s ${XDG_CONFIG_HOME}/tmux/tmux.conf"
+alias tmux="tmux -f ${XDG_CONFIG_HOME}/tmux/tmux.conf"
 
 # Adding colors
 # =============
@@ -19,16 +19,17 @@ alias	grep="grep --color=auto" \
 
 # Directory Navigation
 # ====================
-alias	cdb="cd ~/.local/bin" \
+alias	cdb="cd ${DOTFILES}/bin" \
 		cdv="cd ~/.config/vim" \
 		cfh="cd ~" \
 		cdd="cd ~/.dotfiles"
 
 # Frequent Files
 # ==============
-alias	cfb="${EDITOR:-vim} ~/.bashrc" \
-		cfa="${EDITOR:-vim} ~/.dotfiles/src/aliases.sh" \
-		cfz="${EDITOR:-vim} ~/.config/zsh/.zshrc" \
+
+alias	cfa="${EDITOR:-vim} ${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliases" \
+		cfzc="${EDITOR:-vim} ${ZDOTDIR:-$HOME}/.zshrc" \
+		cfze="${EDITOR:-vim} ~/.zshenv" \
 		cfp="${EDITOR:-vim} ~/.profile" \
 		cfv="${EDITOR:-vim} ~/.vim/vimrc" \
 		cfs="${EDITOR:-vim} ~/.ssh/config"

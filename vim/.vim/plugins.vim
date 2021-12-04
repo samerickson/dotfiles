@@ -7,7 +7,7 @@ if ! filereadable(system('echo -n "${HOME}/.vim/autoload/plug.vim"'))
 endif
 
 " Load in the following packages
-call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"'))
+call plug#begin('~/.vim/plugins')
 Plug 'scrooloose/nerdtree'
 Plug 'vim-scripts/DoxygenToolkit.vim'
 Plug 'tpope/vim-surround'

@@ -18,3 +18,6 @@ map('n', '<leader>fd', ':bp <CR>', {noremap=true}) -- Go to previous buffer usin
 
 -- Quick open frequent files
 map('n', '<leader>ea', ':e ~/.config/shell/aliases <CR>')
+map('n', '<leader>enk', ':e ~/.config/nvim/lua/keymap.lua <CR>')
+map('n', '<leader>enp', ':e ~/.config/nvim/lua/plugins.lua <CR>')
+

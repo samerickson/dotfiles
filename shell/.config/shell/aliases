@@ -28,6 +28,8 @@ alias	cdb="cd ${DOTFILES}/bin" \
 # ==============
 
 alias	cfa="${EDITOR:-vim} ${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliases" \
+		cfnv="${EDITOR:-vim} ${XDG_CONFIG_HOME}/nvim/init.lua" \
+		cfnk="${EDITOR:-vim} ${XDG_CONFIG_HOME}/nvim/lua/keymap.lua" \
 		cfzc="${EDITOR:-vim} ${ZDOTDIR:-$HOME}/.zshrc" \
 		cfze="${EDITOR:-vim} ~/.zshenv" \
 		cfp="${EDITOR:-vim} ~/.profile" \

@@ -8,8 +8,7 @@ endif
 
 " Load in the following packages
 call plug#begin('~/.vim/plugins')
-Plug 'scrooloose/nerdtree'
 Plug 'vim-scripts/DoxygenToolkit.vim'
-Plug 'tpope/vim-surround'
 Plug 'bignimbus/pop-punk.vim'
+Plug 'vim-scripts/AutoComplPop'
 call plug#end()

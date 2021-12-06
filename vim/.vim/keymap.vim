@@ -5,7 +5,7 @@ nnoremap <leader>m :set number!<CR>
 nnoremap <leader>n :set relativenumber!<CR>
 
 " Shortcuts to frequently used functions
-nnoremap S :%s//g<Left><Left>
+nnoremap R :%s//g<Left><Left>
 
 " Exit insert using ctrl
 inoremap jk <Esc>
@@ -19,9 +19,6 @@ map <C-H> <C-W><C-H>
 " Change movements will wrapped and long lines
 map j gj
 map k gk
-
-" Use ctrl+l to correct spelling on the fly
-inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 " Vim settings for using buffers
 nnoremap ,ev :e ~/.vim/vimrc

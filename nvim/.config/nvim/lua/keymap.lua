@@ -33,6 +33,10 @@ map('n', '<leader>l', ':set list!<CR>', {noremap=true})
 map('n', '<leader>n', ':set number!<CR>', {noremap=true})
 map('n', '<leader>m', ':set relativenumber!<CR>', {noremap=true})
 
+-- Highlight lines over 80 characters
+map('n', '<leader>g', ':match Error /\\%>80c/<CR>', {noremap=true})
+map('n', '<leader>h', ':match Error /\\%>80c/<CR>',{noremap=true})
+
 -- Quick open frequent files
 map('n', '<leader>ea', ':e ' .. config .. '/shell/aliases <CR>')
 map('n', '<leader>ev', ':e ' .. config .. '/nvim/init.lua <CR>')

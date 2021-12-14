@@ -10,4 +10,4 @@ if [[ $dbus_status = *"is not running"* ]]; then
   sudo service dbus --full-restart
 fi
 
-i3 > ~/i3.log
+i3 > "${XDG_CACHE_HOME:-$HOME/.cache}/i3/i3-launch.log"

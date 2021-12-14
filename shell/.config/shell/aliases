@@ -2,7 +2,7 @@
 # =================
 # TODO: change source file depending on which shell is being used
 alias	mx="chmod +x" \
-		src="source ${ZDOTDIR:-$HOME}/.zshrc" \
+		src="keybr; source ${ZDOTDIR:-$HOME}/.zshrc" \
 		delswap="trash ~/.local/share/nvim/swap/*; echo 'Cleaned up nvim swap files'" \
 		cu="check_update.sh"
 
@@ -18,27 +18,6 @@ alias	grep="grep --color=auto" \
 		fgrep="fgrep --color=auto" \
 		egrep="egrep --color=auto" \
 		ls="ls --color=auto"
-
-# Directory Navigation
-# ====================
-alias	cdb="cd ${DOTFILES}/bin" \
-		cdv="cd ~/.config/vim" \
-		cfh="cd ~" \
-		cdd="cd ~/.dotfiles"
-
-# Frequent Files
-# ==============
-
-alias	cfa="${EDITOR:-vim} ${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliases" \
-		cfnv="${EDITOR:-vim} ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/init.lua" \
-		cfnk="${EDITOR:-vim} ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/lua/keymap.lua" \
-		cfno="${EDITOR:-vim} ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/lua/opts.lua" \
-		cfnp="${EDITOR:-vim} ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/lua/plugins.lua"
-		cfzc="${EDITOR:-vim} ${ZDOTDIR:-$HOME}/.zshrc" \
-		cfze="${EDITOR:-vim} ~/.zshenv" \
-		cfp="${EDITOR:-vim} ~/.profile" \
-		cfv="${EDITOR:-vim} ~/.vim/vimrc" \
-		cfs="${EDITOR:-vim} ~/.ssh/config"
 
 # Misc
 # ====

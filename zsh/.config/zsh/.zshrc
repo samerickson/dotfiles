@@ -18,3 +18,4 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 # If oh-my-zsh is installed, use it
 [ -f "$ZSH/oh-my-zsh.sh" ] && . $ZSH/oh-my-zsh.sh
+

@@ -5,3 +5,6 @@ export TERM="xterm-256color"
 
 # If neovim is installed, use it
 [ -z $(command -v nvim) ] && export EDITOR=vim || export EDITOR=nvim
+
+# Check if reboot is required
+check_restart.sh

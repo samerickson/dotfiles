@@ -7,6 +7,9 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 require "paq" {
-	"savq/paq-nvim";				-- Let Paq manage itself
-	"Yagua/nebulous.nvim"			-- Color scheme
+	"savq/paq-nvim";						-- Let Paq manage itself
+	"Yagua/nebulous.nvim";					-- Color scheme
+	"nvim-treesitter/nvim-treesitter";		-- Better syntax highlighting
+	"nvim-lua/plenary.nvim";				-- Required by telescope
+	"nvim-telescope/telescope.nvim";		-- Used for flying around your file tree
 }

@@ -12,4 +12,9 @@ require "paq" {
 	"nvim-treesitter/nvim-treesitter";		-- Better syntax highlighting
 	"nvim-lua/plenary.nvim";				-- Required by telescope
 	"nvim-telescope/telescope.nvim";		-- Used for flying around your file tree
+	"danymat/neogen"						-- A better comment generator
+}
+
+require('neogen').setup {
+            enabled = true
 }

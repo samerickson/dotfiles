@@ -8,7 +8,9 @@ alias	mx="chmod +x" \
 
 # Application modification
 # ========================
-alias tmux="tmux -f ${XDG_CONFIG_HOME}/tmux/tmux.conf"
+alias	tmux="tmux -f ${XDG_CONFIG_HOME}/tmux/tmux.conf" \
+		vim="nvim" \
+		vi="nvim"
 
 # Adding colors
 # =============
@@ -28,8 +30,10 @@ alias	cdb="cd ${DOTFILES}/bin" \
 # ==============
 
 alias	cfa="${EDITOR:-vim} ${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliases" \
-		cfnv="${EDITOR:-vim} ${XDG_CONFIG_HOME}/nvim/init.lua" \
-		cfnk="${EDITOR:-vim} ${XDG_CONFIG_HOME}/nvim/lua/keymap.lua" \
+		cfnv="${EDITOR:-vim} ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/init.lua" \
+		cfnk="${EDITOR:-vim} ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/lua/keymap.lua" \
+		cfno="${EDITOR:-vim} ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/lua/opts.lua" \
+		cfnp="${EDITOR:-vim} ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/lua/plugins.lua"
 		cfzc="${EDITOR:-vim} ${ZDOTDIR:-$HOME}/.zshrc" \
 		cfze="${EDITOR:-vim} ~/.zshenv" \
 		cfp="${EDITOR:-vim} ~/.profile" \

@@ -16,6 +16,7 @@ require("nebulous").setup {
   custom_colors = { -- this table can hold any group of colors with their respective values
     LineNr = { fg = "#5BBBDA", bg = "NONE", style = "NONE" },
     CursorLineNr = { fg = "#E1CD6C", bg = "NONE", style = "NONE" },
+	Normal = { bg = "NONE"},
 
     -- it is possible to specify only the element to be changed
     TelescopePreviewBorder = { fg = "#A13413" },

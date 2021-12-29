@@ -9,5 +9,6 @@ set.shiftwidth = tabSize
 set.softtabstop = tabSize
 set.expandtab = false
 set.swapfile = false
+set.list = true
 
-set.listchars = {tab = '▸ ', trail = '·'}
+set.listchars = {tab='» ', extends='⟩', precedes='⟨', trail='•'}

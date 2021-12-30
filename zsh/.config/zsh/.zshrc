@@ -19,3 +19,6 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 # If oh-my-zsh is installed, use it
 [ -f "$ZSH/oh-my-zsh.sh" ] && . $ZSH/oh-my-zsh.sh
 
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -10,5 +10,6 @@ set.softtabstop = tabSize
 set.expandtab = false
 set.swapfile = false
 set.list = true
+set.numberwidth = 5
 
 set.listchars = {tab='» ', extends='⟩', precedes='⟨', trail='•'}

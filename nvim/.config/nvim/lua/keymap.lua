@@ -30,8 +30,8 @@ key.map('n', '<leader>g', ':match Error /\\%>80c/<CR>', opts)
 key.map('n', '<leader>h', ':match Text /\\%>80c/<CR>',opts)
 
 -- Telescope
-key.map('n', '<C-p>', ':lua require("telescope.builtin").find_files()<CR>')
-key.map('i', '<C-p>', ':lua require("telescope.builtin").find_files()<CR>')
+key.map('n', '<C-p>', ':lua require("telescope.builtin").git_files()<CR>')
+key.map('i', '<C-p>', ':lua require("telescope.builtin").git_files()<CR>')
 
 -- LSP
 key.map('n', '<Leader>k', ':lua vim.lsp.buf.hover()<CR>', opts)

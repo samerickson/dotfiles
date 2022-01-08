@@ -10,7 +10,8 @@ alias	mx="chmod +x" \
 # ========================
 alias	tmux="tmux -f ${XDG_CONFIG_HOME}/tmux/tmux.conf" \
 		vim="nvim" \
-		vi="nvim"
+		vi="nvim" \
+		tree="tree -I \"node_modules\""
 
 # Adding colors
 # =============

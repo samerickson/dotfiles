@@ -3,23 +3,24 @@ local fn = vim.fn
 local install_path = fn.stdpath('data') .. '/site/pack/paqs/start/paq-nvim'
 
 if fn.empty(fn.glob(install_path)) > 0 then
-	fn.system({'git', 'clone', '--depth=1', 'https://github.com/savq/paq-nvim.git', install_path})
+    fn.system({'git', 'clone', '--depth=1', 'https://github.com/savq/paq-nvim.git', install_path})
 end
 
 require "paq" {
-	"savq/paq-nvim";						-- Let Paq manage itself
-	"Yagua/nebulous.nvim";					-- Color scheme
-	"nvim-treesitter/nvim-treesitter";		-- Better syntax highlighting
-	"nvim-lua/plenary.nvim";				-- Required by telescope
-	"nvim-telescope/telescope.nvim";		-- Used for flying around your file tree
-	"danymat/neogen";						-- A better comment generator
-	"neovim/nvim-lspconfig";
-	"hrsh7th/nvim-compe";
-	"williamboman/nvim-lsp-installer";
+    "savq/paq-nvim";                        -- Let Paq manage itself
+    "Yagua/nebulous.nvim";                  -- Color scheme
+    "nvim-treesitter/nvim-treesitter";      -- Better syntax highlighting
+    "nvim-lua/plenary.nvim";                -- Required by telescope
+    "nvim-telescope/telescope.nvim";        -- Used for flying around your file tree
+    "danymat/neogen";                       -- A better comment generator
+    "neovim/nvim-lspconfig";                -- Language server configuration
+    "hrsh7th/nvim-compe";                   -- Auto completion
+    "williamboman/nvim-lsp-installer";      -- Installs and enables LSP servers
+    "b3nj5m1n/kommentary";                  -- Comment plugin
 }
 
 require('neogen').setup {
-	enabled = true
+    enabled = true
 }
 
 require('nvim-treesitter.configs').setup {
@@ -39,7 +40,7 @@ require('nvim-treesitter.configs').setup {
 
 local lsp_installer = require("nvim-lsp-installer")
 lsp_installer.on_server_ready(function(server)
-	server:setup({})
+    server:setup({})
 end)
 
 vim.o.completeopt = "menuone,noselect"require('compe').setup {

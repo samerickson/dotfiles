@@ -23,4 +23,6 @@ key.map('n', '<leader>cdc', ':e /home/erickssb/.dotfiles<CR>')
 key.map('n', '<leader>cdg', ':e ~/dev/github<CR>')
 key.map('n', '<leader>cdl', ':e ~/dev/lang<CR>')
 key.map('n', '<leader>cdd', ':e ~/dev<CR>')
+key.map('n', '<leader>cdn', ':e /home/erickssb/.config/nvim<CR>')
+key.map('n', '<leader>cda', ':e ~/dev/personal/cms5000<CR>')
 

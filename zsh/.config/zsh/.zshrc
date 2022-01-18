@@ -1,24 +1,29 @@
+# ~/.config/zsh/.zshrc || $ZDOTDIR/.zshrc
 
-# Load in custom plugins if there are not present already
-[ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions ] && \
-	git clone https://github.com/zsh-users/zsh-autosuggestions \
-		${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+# Function loads and sources plugins localed in ~/.config/zsh/plugins
+# @param Github username
+# #param Github repo name
+function loadPlugin {
+    local LOCATION="${ZSH_PLUGIN:-$HOME/.config/zsh/plugins}/$2"
 
-[ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting ] && \
-	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git \
-	${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+    [ ! -d "$LOCATION" ] && \
+        git clone --depth=1 "https://github.com/$1/$2.git" "$LOCATION"
+    [ -f "$LOCATION"/*.plugin.zsh ] && . $LOCATION/*.plugin.zsh &&
+}
 
-ZSH_THEME="flazz"
+# If file exists source it
+# @param path to file
+function sourceFile {
+    [ -f "$1" ] && . "$1"
+}
 
-DISABLE_UNTRACKED_FILES_DIRTY="true"
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+loadPlugin zsh-users zsh-autosuggestions
+loadPlugin zsh-users zsh-syntax-highlighting
+loadPlugin MichaelAquilina zsh-you-should-use
 
-[ -f "$XDG_CONFIG_HOME/shell/aliases" ] && . "$XDG_CONFIG_HOME/shell/aliases"
-[ -f "$XDG_CONFIG_HOME/shell/keybr.sh" ] && . "$XDG_CONFIG_HOME/shell/keybr.sh"
+sourceFile "$XDG_CONFIG_HOME/shell/aliases"
+sourceFile "$XDG_CONFIG_HOME/shell/keybr.sh"
 
-# If oh-my-zsh is installed, use it
-[ -f "$ZSH/oh-my-zsh.sh" ] && . $ZSH/oh-my-zsh.sh
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+eval "$(starship init zsh)"

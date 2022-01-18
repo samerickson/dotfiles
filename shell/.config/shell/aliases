@@ -34,6 +34,11 @@ alias   gs="git status -s" \
         gca="git commit --amend" \
         gcn="git commit --amend --no-edit"
 
+# Directories
+# ===========
+alias   la="ls -a" \
+        ll="ls -la" \
+
 # Functions
 # =========
 

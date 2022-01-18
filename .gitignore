@@ -1,4 +1,4 @@
 autoload
 .zcomp*
 shell/.config/shell/keybr.sh
-zsh/.config/plugins
+zsh/.config/zsh/plugins

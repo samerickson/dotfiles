@@ -38,4 +38,4 @@ sourceFile "$XDG_CONFIG_HOME/shell/keybr.sh"
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-eval "$(starship init zsh)"
+eval "$(starship init zsh)" || sh -c "$(curl -fsSL https://starship.rs/install.sh)"

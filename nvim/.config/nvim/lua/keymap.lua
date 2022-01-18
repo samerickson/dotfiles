@@ -32,10 +32,17 @@ key.map('n', '<leader>h', ':match Text /\\%>80c/<CR>',opts)
 -- Telescope
 key.map('n', '<C-p>', ':lua require("telescope.builtin").git_files()<CR>')
 key.map('i', '<C-p>', ':lua require("telescope.builtin").git_files()<CR>')
+key.map('n', '<C-o>', ':lua require("telescope.builtin").find_files()<CR>')
+key.map('i', '<C-o>', ':lua require("telescope.builtin").find_files()<CR>')
 
 -- LSP
 key.map('n', '<Leader>k', ':lua vim.lsp.buf.hover()<CR>', opts)
 key.map('n', 'gd', ':lua vim.lsp.buf.definition()<CR>', opts)
 key.map('n', 'gr', ':lua vim.lsp.buf.references()<CR>', opts)
 key.map('n', 'gi', ':lua vim.lsp.buf.implementation()<CR>', opts)
+key.map('n', '<Leader>rn', ':lua vim.lsp.buf.rename()<CR>', opts)
+key.map('n', '<Leader>rr', ':lua vim.lsp.buf.references()<CR>', opts)
+key.map('n', '<Leader>c', ':lua vim.lsp.buf.code_action()<CR>', opts)
+key.map('n', '<Leader>ne', ':lua vim.diagnostic.goto_next()<CR>', opts)
+key.map('n', '<Leader>pe', ':lua vim.diagnostic.goto_prev()<CR>', opts)
 key.map('n', 'so', '[[<cmd>lua require("telescope.builtin").lsp_document_symbols()<CR>]]', opts)

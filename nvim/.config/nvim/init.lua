@@ -6,6 +6,7 @@ require("keymap")
 require("keybr")
 require("opts")
 require("colors")
+require("alpha-config")
 
 vim.cmd [[
 	augroup highlight_yank

@@ -3,6 +3,7 @@ local key = require("map")
 
 key.map('n', '<leader>cfk', ':e /home/erickssb/.dotfiles/bin/keybr<CR>')
 key.map('n', '<leader>cfa', ':e /home/erickssb/.config/shell/aliases<CR>')
+key.map('n', '<leader>cfst', ':e /home/erickssb/.configstarship.toml<CR>')
 key.map('n', '<leader>cfni', ':e /home/erickssb/.config/nvim/init.lua<CR>')
 key.map('n', '<leader>cfnp', ':e /home/erickssb/.config/nvim/lua/plugins.lua<CR>')
 key.map('n', '<leader>cfno', ':e /home/erickssb/.config/nvim/lua/opts.lua<CR>')

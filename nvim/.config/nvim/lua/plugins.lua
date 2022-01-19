@@ -15,13 +15,25 @@ require "paq" {
     "nvim-telescope/telescope.nvim";        -- Used for flying around your file tree
     "danymat/neogen";                       -- A better comment generator
     "neovim/nvim-lspconfig";                -- Language server configuration
-    "hrsh7th/nvim-compe";                   -- Auto completion
+    "hrsh7th/nvim-cmp";                     -- Auto completion
+    "hrsh7th/cmp-nvim-lsp";
+    "hrsh7th/cmp-buffer";
+    "hrsh7th/cmp-path";
+    "hrsh7th/cmp-cmdline";
+    "hrsh7th/cmp-vsnip";
+    "hrsh7th/vim-vsnip";
     "williamboman/nvim-lsp-installer";      -- Installs and enables LSP servers
     "b3nj5m1n/kommentary";                  -- Comment plugin
     "goolord/alpha-nvim";                   -- Neovim dashboard written in lua
     "kyazdani42/nvim-web-devicons";         -- Icons
     "ojroques/nvim-hardline";               -- Status line plugin
 }
+
+local function config(_config)
+    return vim.tbl_deep_extend("force", {
+        capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+    }, _config or {})
+end
 
 local lsp_server_configuration = {
     ["grammarly"] = function(opts)
@@ -44,7 +56,7 @@ require('nvim-treesitter.configs').setup {
 
 local lsp_installer = require("nvim-lsp-installer")
 lsp_installer.on_server_ready(function(server)
-    local opts = {}
+    local opts = config()
 
     if lsp_server_configuration[server.name] then
         lsp_server_configuration[server.name](opts)
@@ -52,29 +64,6 @@ lsp_installer.on_server_ready(function(server)
     end
     server:setup(opts)
 end)
-
-vim.o.completeopt = "menuone,noselect"require('compe').setup {
-  enabled = true;
-  autocomplete = true;
-  debug = false;
-  min_length = 1;
-  preselect = 'enable';
-  throttle_time = 80;
-  source_timeout = 200;
-  incomplete_delay = 400;
-  max_abbr_width = 100;
-  max_kind_width = 100;
-  max_menu_width = 100;
-  documentation = true;  source = {
-    path = true;
-    buffer = true;
-    calc = true;
-    nvim_lsp = true;
-    nvim_lua = true;
-    vsnip = true;
-    ultisnips = true;
-  };
-}
 
 require "nvim-treesitter.configs".setup {
   playground = {

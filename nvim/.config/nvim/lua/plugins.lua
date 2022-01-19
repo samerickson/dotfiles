@@ -26,9 +26,7 @@ require "paq" {
 local lsp_server_configuration = {
     ["grammarly"] = function(opts)
         print("HERE")
-        opts.settings = {
-            filetypes = { "markdown", "tex", "latex" },
-        }
+        opts.filetypes = { "markdown", "tex", "latex" }
     end
 }
 

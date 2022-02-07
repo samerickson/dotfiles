@@ -58,6 +58,7 @@ local directories = {
     {cdc = os.getenv("DOTFILES")},
     {cdg = "~/dev/github"},
     {cdl = "~/dev/lang"},
+    {cda = "~/dev/personal"},
     {cdd = "~/dev"},
     {cdn = nvim_conf},
 

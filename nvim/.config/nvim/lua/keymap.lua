@@ -6,7 +6,10 @@ vim.g.mapleader = ',' -- change the <leader> key to be comma
 
 local opts = { noremap = true, silent = true }
 
-key.map('i', 'jk', '<Esc>', opts) -- Map jk to <Esc>
+key.map('i', 'jk', '<Esc>', opts)
+
+-- Editing
+key.map('n', '<C-Z>', ':redo', opts)
 
 -- BUFFERS
 key.map('n', '<leader>df', ':bn <CR>', opts)
@@ -30,19 +33,22 @@ key.map('n', '<leader>g', ':match Error /\\%>80c/<CR>', opts)
 key.map('n', '<leader>h', ':match Text /\\%>80c/<CR>',opts)
 
 -- Telescope
-key.map('n', '<C-p>', ':lua require("telescope.builtin").git_files()<CR>')
+key.map('n', '<C-p>', ':lua require("telescope.builtin").git_files()<CR>', opts)
 key.map('i', '<C-p>', ':lua require("telescope.builtin").git_files()<CR>')
 key.map('n', '<C-o>', ':lua require("telescope.builtin").find_files()<CR>')
 key.map('i', '<C-o>', ':lua require("telescope.builtin").find_files()<CR>')
+key.map('i', '<C-t>', ':lua require("telescope.builtin").live_grep()<CR>')
+key.map('n', '<C-t>', ':lua require("telescope.builtin").live_grep()<CR>')
+key.map('n', '<C-h>', ':lua require("telescope.builtin").help_tags()<CR>')
+key.map('n', '<C-h>', ':lua require("telescope.builtin").help_tags()<CR>')
 
 -- LSP
 key.map('n', '<Leader>k', ':lua vim.lsp.buf.hover()<CR>', opts)
-key.map('n', 'gd', ':lua vim.lsp.buf.definition()<CR>', opts)
-key.map('n', 'gr', ':lua vim.lsp.buf.references()<CR>', opts)
-key.map('n', 'gi', ':lua vim.lsp.buf.implementation()<CR>', opts)
-key.map('n', '<Leader>rn', ':lua vim.lsp.buf.rename()<CR>', opts)
-key.map('n', '<Leader>rr', ':lua vim.lsp.buf.references()<CR>', opts)
-key.map('n', '<Leader>c', ':lua vim.lsp.buf.code_action()<CR>', opts)
-key.map('n', '<Leader>ne', ':lua vim.diagnostic.goto_next()<CR>', opts)
-key.map('n', '<Leader>pe', ':lua vim.diagnostic.goto_prev()<CR>', opts)
-key.map('n', 'so', '[[<cmd>lua require("telescope.builtin").lsp_document_symbols()<CR>]]', opts)
+key.map('n', '<F12>', ':lua vim.lsp.buf.definition()<CR>', opts)
+key.map('n', '<S-F12>', ':lua vim.lsp.buf.references()<CR>', opts)
+key.map('n', '<C-F12>', ':lua vim.lsp.buf.implementation()<CR>', opts)
+key.map('n', '<C-r><C-r>', ':lua vim.lsp.buf.rename()<CR>', opts)
+key.map('n', 'C-.>', ':lua vim.lsp.buf.code_action()<CR>', opts)
+key.map('n', '<C-n>', ':lua vim.diagnostic.goto_next()<CR>', opts)
+key.map('n', '<C-m>', ':lua vim.diagnostic.goto_prev()<CR>', opts)
+key.map('n', '<F8>', '[[<cmd>lua require("telescope.builtin").lsp_document_symbols()<CR>]]', opts)

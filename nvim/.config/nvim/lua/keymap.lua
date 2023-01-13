@@ -12,8 +12,8 @@ key.map('i', 'jk', '<Esc>', opts)
 key.map('n', '<C-Z>', ':redo', opts)
 
 -- BUFFERS
-key.map('n', '<leader>df', ':bn <CR>', opts)
-key.map('n', '<leader>fd', ':bp <CR>', opts)
+key.map('n', '<leader>t', ':bn <CR>', opts)
+key.map('n', '<leader>g', ':bp <CR>', opts)
 
 -- REGEX replace
 key.map('n', 'R', ':%s//g<Left><Left>', opts)
@@ -30,11 +30,16 @@ key.map('n', '<leader>d', ':lua require("neogen").generate()<CR>', opts)
 
 -- Highlight lines over 80 characters
 key.map('n', '<leader>g', ':match Error /\\%>80c/<CR>', opts)
-key.map('n', '<leader>h', ':match Text /\\%>80c/<CR>',opts)
+key.map('n', '<leader>h', ':match Text /\\%>80c/<CR>', opts)
+
+-- Terminal mode bindings
+key.map('t', '<C-d', '<C-\\><C-n>', opts)
 
 -- Telescope
 key.map('n', '<C-p>', ':lua require("telescope.builtin").git_files()<CR>', opts)
 key.map('i', '<C-p>', ':lua require("telescope.builtin").git_files()<CR>')
+key.map('n', '<C-b>', ':lua require("telescope.builtin").buffers()<CR>')
+key.map('i', '<C-b>', ':lua require("telescope.builtin").buffers()<CR>')
 key.map('n', '<C-o>', ':lua require("telescope.builtin").find_files()<CR>')
 key.map('i', '<C-o>', ':lua require("telescope.builtin").find_files()<CR>')
 key.map('i', '<C-t>', ':lua require("telescope.builtin").live_grep()<CR>')

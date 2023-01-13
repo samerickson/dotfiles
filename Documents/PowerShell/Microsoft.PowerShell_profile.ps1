@@ -2,6 +2,10 @@ $ENV:STARSHIP_CONFIG = "$HOME\.starship\starship.toml"
 
 Invoke-Expression (&starship init powershell)
 
+function pv() {
+    explorer.exe .
+}
+
 function cfp() {
   nvim "C:\Users\erick\OneDrive\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
 }

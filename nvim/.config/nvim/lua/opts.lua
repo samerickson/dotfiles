@@ -5,6 +5,9 @@ local tabSize = 4
 local set = vim.opt
 
 set.shell="pwsh"
+set.shellcmdflag="-command"
+set.shellquote="\""
+set.shellxquote=""
 
 set.tabstop = tabSize
 set.shiftwidth = tabSize

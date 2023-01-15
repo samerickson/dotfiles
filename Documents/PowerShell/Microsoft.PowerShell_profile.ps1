@@ -6,7 +6,11 @@ Invoke-Expression (&starship init powershell)
 filter xargs { & $args[0] ($args[1..$args.length] + $_) }
 
 function x() {
-    explorer.exe .
+  explorer.exe .
+}
+
+function cfg() {
+  nvim "C:\Users\erick\.gitconfig"
 }
 
 function cfp() {
@@ -22,7 +26,7 @@ function cdr() {
 }
 
 function cdc() {
-    Set-Location C:\Dev\Repos\dotfiles
+  Set-Location C:\Dev\Repos\dotfiles
 }
 
 function cfn() {

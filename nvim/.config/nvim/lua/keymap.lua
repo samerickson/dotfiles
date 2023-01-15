@@ -7,6 +7,7 @@ vim.g.mapleader = ',' -- change the <leader> key to be comma
 local opts = { noremap = true, silent = true }
 
 key.map('i', 'jk', '<Esc>', opts)
+key.map('n', '<leader>x', ':Explore<CR>', opts);
 
 -- Editing
 key.map('n', '<C-Z>', ':redo', opts)
@@ -33,7 +34,11 @@ key.map('n', '<leader>g', ':match Error /\\%>80c/<CR>', opts)
 key.map('n', '<leader>h', ':match Text /\\%>80c/<CR>', opts)
 
 -- Terminal mode bindings
-key.map('t', '<C-d', '<C-\\><C-n>', opts)
+key.map('n', '<C-v>', ':terminal<CR>', opts)
+key.map('i', '<C-v>', ':terminal<CR>', opts)
+key.map('t', '<C-d>', '<C-\\><C-n>', opts)
+key.map('t', '<Esc>', '<C-\\><C-n>', opts)
+key.map('t', 'jk', '<C-\\><C-n>', opts)
 
 -- Telescope
 key.map('n', '<C-p>', ':lua require("telescope.builtin").git_files()<CR>', opts)
@@ -44,8 +49,12 @@ key.map('n', '<C-o>', ':lua require("telescope.builtin").find_files()<CR>')
 key.map('i', '<C-o>', ':lua require("telescope.builtin").find_files()<CR>')
 key.map('i', '<C-t>', ':lua require("telescope.builtin").live_grep()<CR>')
 key.map('n', '<C-t>', ':lua require("telescope.builtin").live_grep()<CR>')
+key.map('i', '<C-h>', ':lua require("telescope.builtin").help_tags()<CR>')
 key.map('n', '<C-h>', ':lua require("telescope.builtin").help_tags()<CR>')
-key.map('n', '<C-h>', ':lua require("telescope.builtin").help_tags()<CR>')
+key.map('i', '<C-a>', ':lua require("telescope.builtin").commands()<CR>')
+key.map('n', '<C-a>', ':lua require("telescope.builtin").commands()<CR>')
+key.map('i', '<C-k>', ':lua require("telescope.builtin").keymaps()<CR>')
+key.map('n', '<C-k>', ':lua require("telescope.builtin").keymaps()<CR>')
 
 -- LSP
 key.map('n', '<Leader>k', ':lua vim.lsp.buf.hover()<CR>', opts)

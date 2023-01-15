@@ -2,7 +2,10 @@ $ENV:STARSHIP_CONFIG = "$HOME\.starship\starship.toml"
 
 Invoke-Expression (&starship init powershell)
 
-function pv() {
+# Mock xargs
+filter xargs { & $args[0] ($args[1..$args.length] + $_) }
+
+function x() {
     explorer.exe .
 }
 
@@ -30,6 +33,3 @@ function cdn() {
   Set-Location "C:\Users\erick\AppData\Local\nvim"
 }
 
-# Git aliases
-function gs() { git status -s }
-function ga() { git add }

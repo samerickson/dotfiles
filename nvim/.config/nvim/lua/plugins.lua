@@ -21,11 +21,7 @@ require "paq" {
     "hrsh7th/cmp-path";
     "hrsh7th/cmp-cmdline";
     "hrsh7th/cmp-vsnip";
-    "hrsh7th/vim-vsnip";
     "williamboman/nvim-lsp-installer";      -- Installs and enables LSP servers
-    "b3nj5m1n/kommentary";                  -- Comment plugin
-    "goolord/alpha-nvim";                   -- Neovim dashboard written in lua
-    "kyazdani42/nvim-web-devicons";         -- Icons
     "ojroques/nvim-hardline";               -- Status line plugin
 }
 

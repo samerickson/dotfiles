@@ -5,11 +5,6 @@ Invoke-Expression (&starship init powershell)
 # Mock xargs
 filter xargs { & $args[0] ($args[1..$args.length] + $_) }
 
-# Source powershell configuration files
-function src {
-    . "$profile"
-}
-
 # Applciations shortcuts
 function x {
   Invoke-Expression "$args" &
@@ -56,7 +51,7 @@ function gcoa { git commit --verbose --ammend "$args" }
 function gcb { git checkout -b "$args" }
 function gch { git checkout "$args[0]"; git pull }
 function gf { git fetch }
-function gp { git push }
+function gpsh { git push }
 function gpl { git pull }
 function gssa { git stash save --all }
 function gss { git stash save "$args" }

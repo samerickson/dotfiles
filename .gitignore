@@ -1,3 +1,4 @@
+Private.*
 autoload
 .zcomp*
 shell/.config/shell/keybr.sh

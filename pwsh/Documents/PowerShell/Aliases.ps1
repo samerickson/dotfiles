@@ -6,36 +6,6 @@ function x {
   Invoke-Expression "$args" &
 }
 
-# Quickly edit common files
-function cfg {
-  nvim "C:\Users\erick\.gitconfig"
-}
-
-function cfp {
-  nvim "C:\Users\erick\OneDrive\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
-}
-
-function cfn {
-  nvim "C:\Users\erick\AppData\Local\nvim\init.lua"
-}
-
-# Navigate to common directories
-function cdd {
-  Set-Location 'C:\Dev'
-}
-
-function cdr {
-  Set-Location 'C:\Dev\Repos'
-}
-
-function cdc {
-  Set-Location 'C:\Dev\Repos\dotfiles'
-}
-
-function cdn {
-  Set-Location "C:\Users\erick\AppData\Local\nvim"
-}
-
 # Git helper functions
 function gs { git status }
 function ga { git add "$args" }

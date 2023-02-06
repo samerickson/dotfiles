@@ -16,7 +16,7 @@ function cfg {
 }
 
 function cfp {
-  nvim "C:\Users\erick\OneDrive\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
+  nvim [Environment]::GetFolderPath("MyDocuments") + "\PowerShell\Microsoft.PowerShell_profile.ps1"
 }
 
 function cfn {

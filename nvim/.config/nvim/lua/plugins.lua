@@ -23,6 +23,7 @@ require "paq" {
     "hrsh7th/cmp-vsnip";
     "williamboman/nvim-lsp-installer";      -- Installs and enables LSP servers
     "ojroques/nvim-hardline";               -- Status line plugin
+    "lukas-reineke/indent-blankline.nvim";
 }
 
 -- Include all the configuration files for all plugins
@@ -30,6 +31,7 @@ require("plugins/telescope")
 require("plugins/treesitter")
 require("plugins/cmp")
 require("plugins/lsp")
+require("plugins/indent-blankline")
 require("hardline").setup{}
 require("neogen").setup { enabled = true }
 

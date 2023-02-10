@@ -27,6 +27,7 @@ function gspo { git stash pop }
 
 # Quickly edit common configuration files
 function cfa { nvim "$([Environment]::GetFolderPath("MyDocuments"))\PowerShell\Aliases.ps1" }
+function cfa { nvim "$([Environment]::GetFolderPath("MyDocuments"))\PowerShell\Private.ps1" }
 function cfp { nvim "$([Environment]::GetFolderPath("MyDocuments"))\PowerShell\Microsoft.PowerShell_profile.ps1" }
 
 function cdn { Set-Location "$HOME\AppData\Local\nvim" }

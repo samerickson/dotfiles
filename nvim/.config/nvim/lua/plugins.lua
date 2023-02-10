@@ -1,13 +1,6 @@
-local fn = vim.fn
-
-local install_path = fn.stdpath('data') .. '/site/pack/paqs/start/paq-nvim'
-
-if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth=1', 'https://github.com/savq/paq-nvim.git', install_path})
-end
-
 require "paq" {
     "savq/paq-nvim";                        -- Let Paq manage itself
+    "VonHeikemen/lsp-zero.nvim";
     "Yagua/nebulous.nvim";                  -- Color scheme
     "nvim-treesitter/nvim-treesitter";      -- Better syntax highlighting
     "nvim-treesitter/playground";           -- See treesitter infomration in a buffer
@@ -15,13 +8,17 @@ require "paq" {
     "nvim-telescope/telescope.nvim";        -- Used for flying around your file tree
     "danymat/neogen";                       -- A better comment generator
     "neovim/nvim-lspconfig";                -- Language server configuration
+    "williamboman/mason.nvim";
+    "williamboman/mason-lspconfig.nvim";
     "hrsh7th/nvim-cmp";                     -- Auto completion
     "hrsh7th/cmp-nvim-lsp";
     "hrsh7th/cmp-buffer";
     "hrsh7th/cmp-path";
     "hrsh7th/cmp-cmdline";
     "hrsh7th/cmp-vsnip";
-    "williamboman/nvim-lsp-installer";      -- Installs and enables LSP servers
+    "saadparwaiz1/cmp_luasnip";
+    "L3MON4D3/LuaSnip";
+    "rafamadriz/friendly-snippets";
     "ojroques/nvim-hardline";               -- Status line plugin
     "lukas-reineke/indent-blankline.nvim";
 }

@@ -1,6 +1,3 @@
--- map.lua
-
--- Map method to handle the different kinds of key maps
 return {
 	map = function(mode, combo, mapping, opts)
 		local options = {noremap = true}
@@ -10,4 +7,3 @@ return {
 		vim.api.nvim_set_keymap(mode, combo, mapping, options)
 	end
 }
-

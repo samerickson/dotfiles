@@ -1,8 +1,13 @@
--- opts.lua
-
 local tabSize = 4
-
 local set = vim.opt
+
+-- Always open help files in a left vertical pane
+vim.api.nvim_exec(
+    [[augroup helpfiles
+        au!
+        au BufRead,BufEnter */doc/* wincmd L
+    augroup END]],
+    false)
 
 set.shell="pwsh"
 set.shellcmdflag="-command"

@@ -1,41 +1,47 @@
-require "paq" {
-    "savq/paq-nvim";                        -- Let Paq manage itself
-    "VonHeikemen/lsp-zero.nvim";
-    "Yagua/nebulous.nvim";                  -- Color scheme
-    "nvim-treesitter/nvim-treesitter";      -- Better syntax highlighting
-    "nvim-treesitter/playground";           -- See treesitter infomration in a buffer
-    "nvim-lua/plenary.nvim";                -- Required by telescope
-    "nvim-telescope/telescope.nvim";        -- Used for flying around your file tree
-    "danymat/neogen";                       -- A better comment generator
-    "neovim/nvim-lspconfig";                -- Language server configuration
-    "williamboman/mason.nvim";
-    "williamboman/mason-lspconfig.nvim";
-    "hrsh7th/nvim-cmp";                     -- Auto completion
-    "hrsh7th/cmp-nvim-lsp";
-    "hrsh7th/cmp-buffer";
-    "hrsh7th/cmp-path";
-    "hrsh7th/cmp-cmdline";
-    "hrsh7th/cmp-vsnip";
-    "saadparwaiz1/cmp_luasnip";
-    "L3MON4D3/LuaSnip";
-    "rafamadriz/friendly-snippets";
-    "ojroques/nvim-hardline";               -- Status line plugin
-    "lukas-reineke/indent-blankline.nvim";
-}
+return require('packer').startup(function(use)
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
 
--- Include all the configuration files for all plugins
-require("plugins/telescope")
-require("plugins/treesitter")
-require("plugins/cmp")
-require("plugins/lsp")
-require("plugins/indent-blankline")
-require("hardline").setup{}
-require("neogen").setup { enabled = true }
+    -- Color schemes
+    use 'Yagua/nebulous.nvim'
 
--- Allow cmp to use treesitter
-local function config(_config)
-    return vim.tbl_deep_extend("force", {
-        capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
-    }, _config or {})
-end
+    -- Telescope
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.x',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
 
+    use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"})
+    use("nvim-treesitter/playground")
+    use("nvim-treesitter/nvim-treesitter-context")
+    use 'b3nj5m1n/kommentary'
+
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
+
+    -- Lsp Zero
+    use {
+        'VonHeikemen/lsp-zero.nvim',
+        branch = 'v1.x',
+        requires = {
+            -- LSP Support
+            {'neovim/nvim-lspconfig'},             -- Required
+            {'williamboman/mason.nvim'},           -- Optional
+            {'williamboman/mason-lspconfig.nvim'}, -- Optional
+
+            -- Autocompletion
+            {'hrsh7th/nvim-cmp'},                  -- Required
+            {'hrsh7th/cmp-nvim-lsp'},              -- Required
+            {'hrsh7th/cmp-buffer'},                -- Optional
+            {'hrsh7th/cmp-path'},                  -- Optional
+            {'saadparwaiz1/cmp_luasnip'},          -- Optional
+            {'hrsh7th/cmp-nvim-lua'},              -- Optional
+
+            -- Snippets
+            {'L3MON4D3/LuaSnip'},                  -- Required
+            {'rafamadriz/friendly-snippets'},      -- Optional
+        }
+    }
+end)

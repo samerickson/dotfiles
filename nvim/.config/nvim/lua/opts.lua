@@ -1,16 +1,11 @@
 local tabSize = 4
 local set = vim.opt
 
--- Always open help files in a left vertical pane
-vim.api.nvim_exec(
-    [[augroup helpfiles
-        au!
-        au BufRead,BufEnter */doc/* wincmd L
-    augroup END]],
-    false)
-
-set.shell="pwsh"
+set.relativenumber = true
+set.number = true
+set.shell = "pwsh"
 set.shellcmdflag="-command"
+
 set.shellquote="\""
 set.shellxquote=""
 
@@ -31,3 +26,12 @@ set.updatetime = 1000
 set.cmdheight = 1
 
 set.listchars = {tab='» ', extends='⟩', precedes='⟨', trail='•'}
+
+-- Always open help files in a left vertical pane
+vim.api.nvim_exec(
+    [[augroup helpfiles
+    au!
+    au BufRead,BufEnter */doc/* wincmd L
+    augroup END]],
+    false)
+

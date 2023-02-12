@@ -10,7 +10,7 @@ function x {
 function gs { git status }
 function ga { git add "$args" }
 function gaa { git add --all }
-function gco { git commit --verbose "$args" }
+function gco { git commit --verbose }
 function gcm { git commit --verbose -m "$args" }
 function gcall { git commit --verbose --all }
 function gcoa { git commit --verbose --ammend "$args" }

@@ -15,3 +15,7 @@ vim.keymap.set('', '<C-g>', ':terminal<CR>', opts)
 vim.keymap.set('t', '<C-d>', '<C-\\><C-n>', opts)
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', opts)
 vim.keymap.set('t', 'jk', '<C-\\><C-n>', opts)
+
+-- Show/hide line numbers
+vim.keymap.set('n', '<leader>n', ':set number!<CR>', opts)
+vim.keymap.set('n', '<leader>m', ':set relativenumber!<CR>', opts)

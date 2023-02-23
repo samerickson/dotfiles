@@ -1,3 +1,6 @@
+require 'nvim-treesitter.install'.compilers = { "clang" }
+require 'nvim-treesitter.install'.prefer_git = true
+
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
   ensure_installed = { "help", "javascript", "typescript", "c", "lua", "rust" },

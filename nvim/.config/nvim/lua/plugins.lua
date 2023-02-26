@@ -3,7 +3,14 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- Color schemes
-    use 'Yagua/nebulous.nvim'
+    use 'samerickson/nebulous.nvim'
+    use "savq/melange-nvim"
+    use "folke/tokyonight.nvim"
+
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
 
     -- Telescope
     use {

@@ -1,6 +1,8 @@
 local tabSize = 4
 local set = vim.opt
 
+set.clipboard = "unnamed"
+
 set.relativenumber = true
 set.number = true
 set.shell = "pwsh"

@@ -1,0 +1,5 @@
+(function_call
+  (dot_index_expression
+    field: (identifier) @field (#eq? @field "nvim_exec"))) @testing
+(arguments
+  (string) @string (#match? @string "^\\[\\[.*\\]\\]")) @vimscript

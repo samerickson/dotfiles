@@ -8,6 +8,17 @@ lsp.ensure_installed({
     'rust_analyzer'
 })
 
+local cmp = require('cmp')
+local cmp_mappings = lsp.defaults.cmp_mappings({
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<Tab>'] = cmp.mapping.confirm({ select = true }),
+    ['<CR>'] = cmp.mapping.close(),
+})
+
+lsp.setup_nvim_cmp({
+    mapping = cmp_mappings
+})
+
 -- Fix Undefined global 'vim'
 lsp.configure('lua_ls', {
     settings = {

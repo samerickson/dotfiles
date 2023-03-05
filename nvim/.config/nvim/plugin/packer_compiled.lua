@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\erick\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["cmp-nvim-lsp-signature-help"] = {
+    loaded = true,
+    path = "C:\\Users\\erick\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp-signature-help",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp-signature-help"
+  },
   ["cmp-nvim-lua"] = {
     loaded = true,
     path = "C:\\Users\\erick\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lua",
@@ -104,10 +109,20 @@ _G.packer_plugins = {
     path = "C:\\Users\\erick\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["diffview.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\erick\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\diffview.nvim",
+    url = "https://github.com/sindrets/diffview.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "C:\\Users\\erick\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
+  },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\erick\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
   kommentary = {
     loaded = true,
@@ -134,15 +149,20 @@ _G.packer_plugins = {
     path = "C:\\Users\\erick\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["melange-nvim"] = {
+  ["move.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\erick\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\melange-nvim",
-    url = "https://github.com/savq/melange-nvim"
+    path = "C:\\Users\\erick\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\move.nvim",
+    url = "https://github.com/fedepujol/move.nvim"
   },
   ["nebulous.nvim"] = {
     loaded = true,
     path = "C:\\Users\\erick\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nebulous.nvim",
     url = "https://github.com/samerickson/nebulous.nvim"
+  },
+  neogit = {
+    loaded = true,
+    path = "C:\\Users\\erick\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\neogit",
+    url = "https://github.com/TimUntersberger/neogit"
   },
   ["nvim-autopairs"] = {
     config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
@@ -166,20 +186,22 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-treesitter-context"] = {
-    loaded = true,
-    path = "C:\\Users\\erick\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter-context",
+    loaded = false,
+    needs_bufread = false,
+    path = "C:\\Users\\erick\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\nvim-treesitter-context",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
   },
   ["nvim-treesitter-refactor"] = {
-    loaded = true,
-    path = "C:\\Users\\erick\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter-refactor",
+    loaded = false,
+    needs_bufread = false,
+    path = "C:\\Users\\erick\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\nvim-treesitter-refactor",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-refactor"
   },
   ["nvim-web-devicons"] = {
     loaded = false,
     needs_bufread = false,
     path = "C:\\Users\\erick\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\nvim-web-devicons",
-    url = "https://github.com/kyazdani42/nvim-web-devicons"
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -187,8 +209,9 @@ _G.packer_plugins = {
     url = "https://github.com/wbthomason/packer.nvim"
   },
   playground = {
-    loaded = true,
-    path = "C:\\Users\\erick\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\playground",
+    loaded = false,
+    needs_bufread = true,
+    path = "C:\\Users\\erick\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\playground",
     url = "https://github.com/nvim-treesitter/playground"
   },
   ["plenary.nvim"] = {
@@ -200,11 +223,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\erick\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  ["tokyonight.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\erick\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\tokyonight.nvim",
-    url = "https://github.com/folke/tokyonight.nvim"
   }
 }
 

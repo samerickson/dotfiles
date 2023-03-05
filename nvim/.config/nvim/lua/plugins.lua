@@ -2,10 +2,20 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
-    -- Color schemes
-    use 'samerickson/nebulous.nvim'
-    use "savq/melange-nvim"
-    use "folke/tokyonight.nvim"
+    use 'samerickson/nebulous.nvim' -- Color scheme
+    use 'fedepujol/move.nvim' -- Move blocks of text easily
+    use "lukas-reineke/indent-blankline.nvim" -- Indent new lines
+    use 'b3nj5m1n/kommentary' -- Comment line or selection
+
+    -- Git
+    use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+    use {
+        'sindrets/diffview.nvim',
+        requires = {
+            {'nvim-lua/plenary.nvim'},
+            {'nvim-tree/nvim-web-devicons', opt = true}
+        }
+    }
 
     use {
         "windwp/nvim-autopairs",
@@ -18,11 +28,15 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"})
-    use 'nvim-treesitter/playground'
-    use 'nvim-treesitter/nvim-treesitter-context'
-    use 'nvim-treesitter/nvim-treesitter-refactor'
-    use 'b3nj5m1n/kommentary'
+    use{
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate',
+        requires = {
+            {'nvim-treesitter/playground', opt = true },
+            {'nvim-treesitter/nvim-treesitter-context', opt = true},
+            {'nvim-treesitter/nvim-treesitter-refactor', opt = true}
+        }
+    }
 
     use {
         'nvim-lualine/lualine.nvim',
@@ -35,21 +49,22 @@ return require('packer').startup(function(use)
         branch = 'v1.x',
         requires = {
             -- LSP Support
-            {'neovim/nvim-lspconfig'},             -- Required
-            {'williamboman/mason.nvim'},           -- Optional
-            {'williamboman/mason-lspconfig.nvim'}, -- Optional
+            {'neovim/nvim-lspconfig'},
+            {'williamboman/mason.nvim'},
+            {'williamboman/mason-lspconfig.nvim'},
 
             -- Autocompletion
-            {'hrsh7th/nvim-cmp'},                  -- Required
-            {'hrsh7th/cmp-nvim-lsp'},              -- Required
-            {'hrsh7th/cmp-buffer'},                -- Optional
-            {'hrsh7th/cmp-path'},                  -- Optional
-            {'saadparwaiz1/cmp_luasnip'},          -- Optional
-            {'hrsh7th/cmp-nvim-lua'},              -- Optional
+            {'hrsh7th/nvim-cmp'},
+            {'hrsh7th/cmp-nvim-lsp'},
+            {'hrsh7th/cmp-buffer'},
+            {'hrsh7th/cmp-path'},
+            {'saadparwaiz1/cmp_luasnip'},
+            {'hrsh7th/cmp-nvim-lua'},
+            {'hrsh7th/cmp-nvim-lsp-signature-help'},
 
             -- Snippets
-            {'L3MON4D3/LuaSnip'},                  -- Required
-            {'rafamadriz/friendly-snippets'},      -- Optional
+            {'L3MON4D3/LuaSnip'},
+            {'rafamadriz/friendly-snippets'},
         }
     }
 end)

@@ -1,4 +1,4 @@
-require("plugins")
 require("opts")
 require("remap")
+require("plugins")
 

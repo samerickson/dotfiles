@@ -1,11 +1,17 @@
-local tabSize = 4
+local tabSize = 2
 local set = vim.opt
-
-set.clipboard = "unnamed"
 
 set.relativenumber = true
 set.number = true
-set.shell = "pwsh"
+
+local osname = vim.loop.os_uname().sysname
+
+if osname == "Linux" then
+  set.shell = "bash"
+elseif osname == "Windows_NT" then
+  set.shell = "pwsh"
+end
+
 set.shellcmdflag="-command"
 
 set.shellquote="\""
@@ -31,9 +37,9 @@ set.listchars = {tab='» ', extends='⟩', precedes='⟨', trail='•'}
 
 -- Always open help files in a left vertical pane
 vim.api.nvim_exec(
-    [[augroup helpfiles
-    au!
-    au BufRead,BufEnter */doc/* wincmd L
-    augroup END]],
-    false)
+[[augroup helpfiles
+au!
+au BufRead,BufEnter */doc/* wincmd L
+augroup END]],
+false)
 

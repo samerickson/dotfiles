@@ -1,13 +1,3 @@
-require('telescope').setup{
-    defaults = {
-        file_ignore_patterns = {
-            "node_modules",
-            "x64",
-            "coverage"
-        },
-    },
-}
-
 -- Telescope remappings
 local builtin = require('telescope.builtin')
 local opts = { noremap = true }

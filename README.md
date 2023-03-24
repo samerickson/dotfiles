@@ -11,6 +11,7 @@ symbolic link to a config file is insufficient.
 - `bat`: A cat clone that supports syntax highlighting: [link](https://github.com/sharkdp/bat)
 - `neovim`: Terminal editor of choice: [link](https://neovim.io/)
 - `deluga-mono`: Nerd font of choice: [link](https://github.com/adam7/delugia-code)
+- `clang`: Required for neovim.
 
 ## Windows Installation Notes
 
@@ -49,15 +50,10 @@ To add a symbolic link to a directory, you can use the following command:
 New-Item -ItemType Junction -Path "C:\LINK" -Target "C:\SOURCE"
 ```
 
-### Dependencies
+### Windows Specific Dependencies
 
-#### Paq
-
-[Paq](https://github.com/savq/paq-nvim) can be installed using the following command:
-
-```bash
-git clone https://github.com/savq/paq-nvim.git "$env:LOCALAPPDATA\nvim-data\site\pack\paqs\start\paq-nvim"
-```
+The dependencies that I have found are listed here. Not all dependencies are
+listed as I get to them as I run into issues.
 
 #### Tree Sitter
 

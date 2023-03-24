@@ -2,7 +2,7 @@ return {
     'samerickson/nebulous.nvim',
     lazy = false,
     priority = 1000,
-    config = {
+    opts = {
         disable = {
             background = true,
             endOfBuffer = false,

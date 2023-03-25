@@ -1,5 +1,5 @@
-test -s ~/.config/shell/aliases && . ~/.config/shell/aliases || true
 test -s ~/.config/shell/env && . ~/.config/shell/env || true
+test -s ~/.config/shell/aliases && . ~/.config/shell/aliases || true
 
 eval "$(starship init bash)"
 

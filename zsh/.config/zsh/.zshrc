@@ -23,20 +23,11 @@ function loadPlugin {
     [ -f "$LOCATION"/*.plugin.zsh ] && . $LOCATION/*.plugin.zsh &&
 }
 
-# If file exists source it
-# @param path to file
-function sourceFile {
-    [ -f "$1" ] && . "$1"
-}
-
 loadPlugin zsh-users zsh-autosuggestions
 loadPlugin zsh-users zsh-syntax-highlighting
 loadPlugin MichaelAquilina zsh-you-should-use
 
-sourceFile "$XDG_CONFIG_HOME/shell/aliases"
-sourceFile "$XDG_CONFIG_HOME/shell/keybr.sh"
-
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+. "$XDG_CONFIG_HOME/shell/aliases"
 
 eval "$(starship init zsh)"
-#sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+

@@ -8,3 +8,5 @@ export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 export ZSH_PLUGINS="${ZDOTDIR:-$HOME/.config/zsh}/plugins"
 export ZSH_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh"
 export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
+
+export PATH="$PATH:${HOME}/.cargo/bin"

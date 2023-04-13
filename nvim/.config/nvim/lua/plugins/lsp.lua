@@ -55,6 +55,7 @@ return {
         }
       })
 
+
       lsp.configure('rust_analyzer', {
         checkOnSave = {
           -- default: 'cargo check'
@@ -81,7 +82,7 @@ return {
         vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
         vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
         vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
-        vim.keymap.set("n", "<leader>a>", function() vim.lsp.buf.code_action() end, opts)
+        vim.keymap.set("n", "<leader>a", function() vim.lsp.buf.code_action() end, opts)
         vim.keymap.set("", "<S-F12>", function() vim.lsp.buf.references() end, opts)
         vim.keymap.set("n", "<C-r><C-r>", function() vim.lsp.buf.rename() end, opts)
         vim.keymap.set("i", "<C-s>", function() vim.lsp.buf.signature_help() end, opts)

@@ -32,6 +32,7 @@ alias gs="git status -s" \
       gcb="git checkout -b" \
       gf="git fetch" \
       gp="git pull" \
+      gpsh="git push" \
       gst="git status" \
       gsa="git stash push" \
       gsr="git stash pop" \
@@ -44,7 +45,11 @@ alias gs="git status -s" \
 
 # Directories
 # ===========
-alias cdc="echo $DOTFILES && cs $DOTFILES"
+alias cdc="echo $DOTFILES && cs $DOTFILES" \
+      cc="/mnt/c" \
+      cdd="$HOME/dev" \
+      cdg="$HOME/dev/github" \
+      cdp="$HOME/dev/personal"
 
 # Functions
 # =========

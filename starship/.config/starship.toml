@@ -16,7 +16,6 @@ disabled = false
 
 # This is the default symbols table.
 [os.symbols]
-Alpaquita = "🔔 "
 Alpine = "🏔️ "
 Amazon = "🙂 "
 Android = "🤖 "

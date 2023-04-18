@@ -1,6 +1,6 @@
 # ~/.config/starship.toml
 
-format = "🚀 $all"
+format = "$os$all"
 
 add_newline = true
 
@@ -10,8 +10,6 @@ error_symbol = "[➜](bold red)"
 
 
 [os]
-format = "on [($name )]($style)"
-style = "bold blue"
 disabled = false
 
 # This is the default symbols table.
@@ -20,7 +18,6 @@ Alpine = "🏔️ "
 Amazon = "🙂 "
 Android = "🤖 "
 Arch = "🎗️ "
-Artix = "🎗️ "
 CentOS = "💠 "
 Debian = "🌀 "
 DragonFly = "🐉 "
@@ -33,7 +30,6 @@ Gentoo = "🗜️ "
 HardenedBSD = "🛡️ "
 Illumos = "🐦 "
 Linux = "🐧 "
-Mabox = "📦 "
 Macos = "🍎 "
 Manjaro = "🥭 "
 Mariner = "🌊 "

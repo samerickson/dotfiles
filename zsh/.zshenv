@@ -1,4 +1,7 @@
 # Set config variables that should be set any time zsh is being used
+
+export EDITOR="nvim"
+
 export GOPATH="${HOME}/dev/go"
 export DOTFILES="${HOME}/dev/personal/dotfiles"
 export XDG_CONFIG_HOME="$HOME/.config"

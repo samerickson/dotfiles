@@ -3,9 +3,25 @@ local opts = { noremap = true }
 
 vim.keymap.set('', '<C-p>', ':Telescope git_files<CR>', opts)
 vim.keymap.set('', '<A-p>', ':Telescope quickfix<CR>', opts)
-vim.keymap.set('', '<C-t>', ':Telescope find_files<CR>', opts)
+vim.keymap.set('', '<C-t>', ':Telescope fd<CR>', opts)
 vim.keymap.set('', '<C-f>', ':Telescope live_grep<CR>', opts)
 vim.keymap.set('', '<A-t>', ':Telescope vim_options<CR>', opts)
 vim.keymap.set('', '<A-p>', ':Telescope commands<CR>', opts)
 vim.keymap.set('', '<C-b>', ':Telescope buffers<CR>', opts)
+vim.keymap.set('', '<C-h>', ':Telescope oldfiles<CR>', opts)
 
+vim.keymap.set('n', '<leader>tgf', ':Telescope git_files<CR>', opts)
+vim.keymap.set('n', '<leader>tgb', ':Telescope git_branches<CR>', opts)
+vim.keymap.set('n', '<leader>tgc', ':Telescope git_commits<CR>', opts)
+vim.keymap.set('n', '<leader>tgs', ':Telescope git_stash<CR>', opts)
+vim.keymap.set('n', '<leader>tgi', ':Telescope git_status<CR>', opts)
+
+vim.keymap.set('n', '<leader>tvo', ':Telescope oldfiles<CR>', opts)
+
+vim.keymap.set('n', '<leader>to', ':Telescope fd<CR>', opts)
+vim.keymap.set('n', '<leader>tb', ':Telescope buffers<CR>', opts)
+vim.keymap.set('n', '<leader>tc', ':Telescope commands<CR>', opts)
+vim.keymap.set('n', '<leader>tf', ':Telescope live_grep<CR>', opts)
+vim.keymap.set('n', '<leader>tq', ':Telescope quickfix<CR>', opts)
+vim.keymap.set('n', '<leader>to', ':Telescope vim_options<CR>', opts)
+vim.keymap.set('n', '<leader>tt', ':Telescope<CR>', opts)

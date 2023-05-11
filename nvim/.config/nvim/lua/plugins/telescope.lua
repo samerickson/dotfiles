@@ -8,12 +8,34 @@ return {
     opts = {
       pickers = {
         live_grep = {
-            additional_args = function(opts)
-                return {"--hidden"}
-            end
+          only_sort_text = true
+        },
+        grep_string = {
+          only_sort_text = true
+        },
+        find_files = {
+          hidden = true
+        },
+        git_files = {
+          hidden = true,
+          show_untracked = true
+        },
+        colorscheme = {
+          enable_preview = true,
         },
       },
       defaults = {
+        vimgrep_arguments = {
+          "rg",
+          "--color=never",
+          "--no-heading",
+          "--with-filename",
+          "--line-number",
+          "--column",
+          "--smart-case",
+          "--hidden",
+          "--glob=!.git/",
+        },
         file_ignore_patterns = {
           "node_modules",
           "x64",

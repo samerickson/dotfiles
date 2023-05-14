@@ -29,7 +29,6 @@ function gspo { git stash pop }
 # Quickly edit common configuration files
 function cfs { nvim "$HOME\.starship\starship.toml" }
 function cfa { nvim "$([Environment]::GetFolderPath("MyDocuments"))\PowerShell\Aliases.ps1" }
-function cfa { nvim "$([Environment]::GetFolderPath("MyDocuments"))\PowerShell\Private.ps1" }
-function cfp { nvim $profile }
+function cfp { nvim "$([Environment]::GetFolderPath("MyDocuments"))\PowerShell\Private.ps1" }
 
 function cdn { Set-Location "$HOME\AppData\Local\nvim" }

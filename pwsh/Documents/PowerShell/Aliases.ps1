@@ -9,6 +9,7 @@ function x {
 # Git helper functions
 function gs { git status }
 function ga { git add "$args" }
+function gap { git add -p }
 function gaa { git add --all }
 function gco { git commit --verbose }
 function gcm { git commit --verbose -m "$args" }

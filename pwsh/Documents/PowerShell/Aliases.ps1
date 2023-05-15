@@ -6,6 +6,10 @@ function x {
   Invoke-Expression "$args" &
 }
 
+function sln {
+  Start-Process $(Get-Item *.sln | Select-Object -ExpandProperty Name)
+}
+
 # Git helper functions
 function gs { git status }
 function ga { git add "$args" }

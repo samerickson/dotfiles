@@ -35,6 +35,8 @@ set.cmdheight = 1
 
 set.listchars = {tab='» ', extends='⟩', precedes='⟨', trail='•'}
 
+set.colorcolumn = "120"
+
 -- Always open help files in a left vertical pane
 vim.api.nvim_exec(
 [[augroup helpfiles

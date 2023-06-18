@@ -5,10 +5,13 @@ return {
     dependencies = {
       { 'nvim-lua/plenary.nvim' },
     },
-    opts = {
+    config = {
       pickers = {
         live_grep = {
-          only_sort_text = true
+          only_sort_text = true,
+          additional_args = function(opts)
+            return { "--hidden" }
+          end
         },
         grep_string = {
           only_sort_text = true
@@ -25,6 +28,7 @@ return {
         },
       },
       defaults = {
+        prompt_prefix = "🔎 ",
         vimgrep_arguments = {
           "rg",
           "--color=never",
@@ -43,10 +47,19 @@ return {
         }
       }
     },
-    init = function ()
-
+    init = function()
       -- Telescope remappings
       local opts = { noremap = true }
+      local builtin = require("telescope.builtin")
+      local themes = require('telescope.themes');
+
+      local custom_picker_directory = function(title, directory)
+        return themes.get_dropdown {
+          previewer = false,
+          cwd = directory,
+          prompt_title = title,
+        }
+      end
 
       vim.keymap.set('', '<C-p>', ':Telescope git_files<CR>', opts)
       vim.keymap.set('', '<A-p>', ':Telescope quickfix<CR>', opts)
@@ -63,6 +76,17 @@ return {
       vim.keymap.set('n', '<leader>tgc', ':Telescope git_commits<CR>', opts)
       vim.keymap.set('n', '<leader>tgs', ':Telescope git_stash<CR>', opts)
       vim.keymap.set('n', '<leader>tgi', ':Telescope git_status<CR>', opts)
+
+      -- Open dotfiles in telescope
+      vim.keymap.set('n', '<leader>td', function()
+        builtin.git_files(custom_picker_directory("🐡 Dotfiles 🐠", "~/dev/personal/dotfiles"))
+      end, opts)
+
+      -- Open neovim files in telescope
+      vim.keymap.set('n', '<leader>tn', function()
+        builtin.find_files(
+          custom_picker_directory("🗽 Neovim Configuration Files🗼", "~/dev/personal/dotfiles/nvim/.config/nvim"))
+      end);
 
       vim.keymap.set('n', '<leader>tvo', ':Telescope oldfiles<CR>', opts)
 

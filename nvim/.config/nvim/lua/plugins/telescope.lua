@@ -5,7 +5,7 @@ return {
     dependencies = {
       { 'nvim-lua/plenary.nvim' },
     },
-    config = {
+    opts = {
       pickers = {
         live_grep = {
           only_sort_text = true,

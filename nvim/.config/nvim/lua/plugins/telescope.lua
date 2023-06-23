@@ -43,7 +43,9 @@ return {
         file_ignore_patterns = {
           "node_modules",
           "x64",
-          "coverage"
+          "coverage",
+          "help",
+          "Help"
         }
       }
     },

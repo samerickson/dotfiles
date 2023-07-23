@@ -47,10 +47,11 @@ alias gs="git status -s" \
 # Directories
 # ===========
 alias cdc="echo $DOTFILES && cs $DOTFILES" \
-      cc="/mnt/c" \
-      cdd="$HOME/dev" \
-      cdg="$HOME/dev/github" \
-      cdp="$HOME/dev/personal"
+      cdn="cs $DOTFILES/nvim/.config/nvim" \
+      cc="cs /mnt/c" \
+      cdd="cs $HOME/dev" \
+      cdg="cs $HOME/dev/github" \
+      cdp="cs $HOME/dev/personal"
 
 # Files
 # =====

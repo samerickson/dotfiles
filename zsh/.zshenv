@@ -4,6 +4,7 @@ export EDITOR="nvim"
 
 export GOPATH="${HOME}/dev/go"
 export DOTFILES="${HOME}/dev/personal/dotfiles"
+export NVIM_CONFIG="${DOTFILES}/nvim/.config/nvim"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"

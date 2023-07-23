@@ -1,5 +1,6 @@
 export EDITOR="nvim"
 export DOTFILES="$HOME/dev/personal/dotfiles/"
+export NVIM_CONFIG="$DOFILES/nvim/,.config/nvim"
 export PATH=$PATH:/usr/local/go/bin
 export NVM_DIR="$HOME/.nvm"
 

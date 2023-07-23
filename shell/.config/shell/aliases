@@ -10,7 +10,7 @@ alias mx="chmod +x" \
 alias tmux="tmux -f ${XDG_CONFIG_HOME}/tmux/tmux.conf" \
       vim="nvim" \
       vi="nvim" \
-      tree="tree -I \"node_modules\""
+      tree="tree -I \"node_modules\"" \
       la="ls -a" \
       ll="ls -la" \
 

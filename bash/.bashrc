@@ -1,16 +1,12 @@
-export EDITOR="nvim"
-export DOTFILES="$HOME/dev/personal/dotfiles/"
-export NVIM_CONFIG="$DOFILES/nvim/,.config/nvim"
-export PATH=$PATH:/usr/local/go/bin
-export NVM_DIR="$HOME/.nvm"
-
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
       *) return;;
 esac
 
-test -s ~/.config/shell/aliases && . ~/.config/shell/aliases || true
+test -s "$HOME/.zshenv" && \. "$HOME/.zshenv" || true
+
+test -s ~/.config/shell/aliases && \. "$HOME/.config/shell/aliases" || true
 
 eval "$(starship init bash)"
 

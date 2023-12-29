@@ -4,4 +4,4 @@ autoload
 .zcomp*
 shell/.config/shell/keybr.sh
 nvim/.config/nvim/lua/keybr.lua
-zsh/.config/zsh/plugins
+

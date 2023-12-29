@@ -52,11 +52,13 @@ alias cdc="echo $DOTFILES && cs $DOTFILES" \
       cdd="cs $HOME/dev" \
       cdg="cs $HOME/dev/github" \
       cdp="cs $HOME/dev/personal" \
-      cdb="cs $HOME/.local/bin"
+      cdb="cs $HOME/.local/bin" \
+      cdt="cs $HOME/dev/test"
 
 # Files
 # =====
-alias cfa="$EDITOR ~/.config/shell/aliases"
+alias cfa="$EDITOR ~/.config/shell/aliases" \
+      cfz="$EDITOR $ZDOTDIR/.zshrc"
 
 # Functions
 # =========
@@ -76,7 +78,7 @@ histdata() {
 back() { cp $1{,.backup}; }
 
 # Cd into a directory then list its contents
-cs() { cd "$1" && ls; }
+cs() { cd "$1" && lsd; }
 
 # Create a directory and cd into it
 mds() { mkdir "$1" && cd "$1"; }

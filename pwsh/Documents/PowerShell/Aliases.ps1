@@ -1,3 +1,7 @@
+$nvimconfig="$HOME\AppData\Local\nvim"
+
+$env:NVIM_CONFIG=$nvimconfig
+
 # Mock xargs
 filter xargs { & $args[0] ($args[1..$args.length] + $_) }
 
@@ -35,4 +39,4 @@ function cfs { nvim "$HOME\.starship\starship.toml" }
 function cfa { nvim "$([Environment]::GetFolderPath("MyDocuments"))\PowerShell\Aliases.ps1" }
 function cfp { nvim "$([Environment]::GetFolderPath("MyDocuments"))\PowerShell\Private.ps1" }
 
-function cdn { Set-Location "$HOME\AppData\Local\nvim" }
+function cdn { Set-Location $nvimconfig }

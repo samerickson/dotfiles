@@ -4,12 +4,8 @@ case $- in
       *) return;;
 esac
 
-test -s "$HOME/.zshenv" && \. "$HOME/.zshenv" || true
-
-test -s ~/.config/shell/aliases && \. "$HOME/.config/shell/aliases" || true
+[ -f "$HOME/.zshenv" ] && source "$HOME/.zshenv"
+[ -f "$HOME/.config/shell/aliases" ] && source "$HOME/.config/shell/aliases"
 
 eval "$(starship init bash)"
-
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 

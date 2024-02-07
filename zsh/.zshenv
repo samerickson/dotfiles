@@ -15,3 +15,4 @@ export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
 export NVM_DIR="$HOME/.config/nvm"
 
 export PATH="$PATH:${HOME}/.cargo/bin:${HOME}/dev/go/bin:/usr/local/go/bin:${HOME}/.local/bin:/snap/bin"
+source "$HOME/.cargo/env"

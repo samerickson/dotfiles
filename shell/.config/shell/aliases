@@ -57,8 +57,10 @@ alias cdc="echo $DOTFILES && cs $DOTFILES" \
 
 # Files
 # =====
-alias cfa="$EDITOR ~/.config/shell/aliases" \
-      cfz="$EDITOR $ZDOTDIR/.zshrc"
+alias cfa="$EDITOR $HOME/.config/shell/aliases" \
+      cfz="$EDITOR $ZDOTDIR/.zshrc" \
+      cfb="$EDITOR $HOME/.bashrc" \
+      cfe="$EDITOR $HOME/.zshenv"
 
 # Functions
 # =========

@@ -2,6 +2,9 @@ $nvimconfig="$HOME\AppData\Local\nvim"
 
 $env:NVIM_CONFIG=$nvimconfig
 
+# Overrides
+Set-Alias ls -Value lsd
+
 # Mock xargs
 filter xargs { & $args[0] ($args[1..$args.length] + $_) }
 

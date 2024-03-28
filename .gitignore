@@ -3,5 +3,5 @@ Private.*
 autoload
 .zcomp*
 shell/.config/shell/keybr.sh
-nvim/.config/nvim/lua/keybr.lua
-
+nvim/.config/nvim/lua/keybr.l
+pwsh/Documents/PowerShell/Modules/*

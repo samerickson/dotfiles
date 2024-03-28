@@ -4,8 +4,11 @@ Invoke-Expression (&starship init powershell)
 
 Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
 
-# If this fails it can be installed with Install-Module PSColor
+# Can be installed with Install-Module PSColor
 Import-Module PSColor
+
+# Can be installed using: PowerShellGet\Install-Module posh-git -Scope CurrentUser -Force
+Import-Module posh-git
 
 $aliases="$([Environment]::GetFolderPath("MyDocuments"))\PowerShell\Aliases.ps1"
 $private="$([Environment]::GetFolderPath("MyDocuments"))\PowerShell\Private.ps1"

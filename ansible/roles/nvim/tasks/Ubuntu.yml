@@ -12,8 +12,17 @@
     state: present
   become: true
 
-- name: "Neovim | {{ ansible_distribution }} | Install"
-  ansible.builtin.apt_repository:
-    repo: ppa:neovim-ppa/unstable
-    state: present
+- name: "Neovim | {{ ansible_distribution }} | Clone Repo"
+  git:
+    depth: 1
+    repo: "https://github.com/neovim/neovim.git"
+    single_branch: true
+    dest: "{{ ansible_user_dir }}/dev/github/neovim"
   become: true
+
+- name: "Neovim | {{ ansible_distribution }} | Install"
+  make:
+    chdir: "{{ ansible_user_dir }}/dev/github/neovim"
+    target: install
+  become: true
+

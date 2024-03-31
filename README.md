@@ -3,6 +3,10 @@
 This repository is all of my configuration files. I make use of stow to manage the symbolic links, and I try to create
 scripts that can be used to install and configure things when a simple symbolic link to a config file is insufficient.
 
+## References
+
+Most of the ansible scripts were initially taken from: [TechDufus | dotfiles](https://github.com/TechDufus/dotfiles).
+
 ## Dependencies
 
 - `delta`: Used for git diff: [link](https://github.com/dandavison/delta)

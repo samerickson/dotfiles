@@ -1,0 +1,9 @@
+---
+# Installs packages that do not have any configuration files associated with them
+- name: "Install packages apt"
+  ansible.builtin.import_tasks: ubuntu.yml
+  when: ansible_os_family == 'Debian'
+
+- name: "Install packages chocolatey"
+  ansible.builtin.import_tasks: windows.yml
+  when: ansible_os_family == 'Windows'

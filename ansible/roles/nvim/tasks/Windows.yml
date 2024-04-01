@@ -1,0 +1,4 @@
+- name: "Neovim | {{ ansible_distribution }} | Install via chocolatey"
+  win_chocolatey:
+    name: neovim
+    state: present

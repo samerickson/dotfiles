@@ -1,3 +1,5 @@
 default_roles:
-  - bat
+  - packages
+  - lua
+  - rust
   - nvim

@@ -7,6 +7,9 @@ scripts that can be used to install and configure things when a simple symbolic 
 
 Most of the ansible scripts were initially taken from: [TechDufus | dotfiles](https://github.com/TechDufus/dotfiles).
 
+- https://techviewleo.com/list-of-ansible-os-family-distributions-facts/
+- 
+
 ## Dependencies
 
 - `delta`: Used for git diff: [link](https://github.com/dandavison/delta)

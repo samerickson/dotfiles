@@ -1,0 +1,26 @@
+---
+- name: "Install packages using apt"
+  ansible.builtin.apt:
+    name:
+      - git
+      - make
+      - gcc
+      - cmake
+      - curl
+      - unzip
+      - ripgrep
+      - fd-find
+      - fzf
+      - fish
+      - zsh
+      - git-delta
+      - lsd
+      - bat
+    state: present
+  become: true
+
+- name: "Install packages using snap"
+  community.general.snap:
+    name:
+      - firefox
+      - bruno

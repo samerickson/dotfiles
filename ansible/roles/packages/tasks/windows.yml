@@ -1,0 +1,17 @@
+- name: "Install packages using chocolatey"
+  win_chocolatey:
+    name:
+    - git
+    - bat
+    - lsd
+    - fnm
+    - git-delta
+    - less
+    - obs
+    - nerd-fonts-DelugiaMono-Complete
+    - bruno
+    - 7zip
+    - lazygit
+    - dos2unix
+    - openssl
+    state: present

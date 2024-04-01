@@ -1,0 +1,15 @@
+---
+- name: Rust | Install packages
+  ansible.builtin.apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: true
+  become: true
+  loop:
+    - rustc
+    - cargo
+
+- name: Cargo | Install packages
+  community.general.cargo:
+    name:
+     - fnm # on ubuntu this cannot be installed using apt

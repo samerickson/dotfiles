@@ -1,6 +1,8 @@
 - name: "Install packages using chocolatey"
   win_chocolatey:
-    name:
+    name: "{{ item }}"
+    state: present
+  loop:
     - git
     - bat
     - lsd
@@ -14,4 +16,8 @@
     - lazygit
     - dos2unix
     - openssl
-    state: present
+    - googlechrome
+    - vscode
+    - docker-cli
+    - docker-compose
+    - dotnetcore-sdk

@@ -2,65 +2,51 @@
 
 # System management
 # =================
-alias mx="chmod +x" \
-      src=". ~/.zshenv && . $ZDOTDIR/.zshrc"
+alias mx="chmod +x"
+alias src=". ~/.zshenv && . $ZDOTDIR/.zshrc"
 
 # Application modification
 # ========================
-alias tmux="tmux -f ${XDG_CONFIG_HOME}/tmux/tmux.conf" \
-      vim="nvim" \
-      vi="nvim" \
-      tree="tree -I \"node_modules\"" \
-      la="ls -a" \
-      ll="ls -la" \
+alias tmux="tmux -f $XDG_CONFIG_HOME/tmux/tmux.conf"
+alias vim="nvim"
+alias vi="nvim"
+alias tree="tree -I \"node_modules\""
+alias la="ls -a"
+alias ll="ls -la"
 
 # Adding colors
 # =============
-alias grep="grep --color=auto" \
-      fgrep="fgrep --color=auto" \
-      egrep="egrep --color=auto" \
-      ls="ls --color=auto"
+alias grep="grep --color=auto"
+alias ls="lsd"
 
 # Git
 # ====
-alias gs="git status -s" \
-      ga="git add" \
-      gaa="git add --all" \
-      gco="git commit --verbose" \
-      gcm="git commit -m" \
-      gcall="git commit --verbose --all" \
-      gcoa="git commit --verbose --ammend" \
-      gcb="git checkout -b" \
-      gf="git fetch" \
-      gp="git pull" \
-      gpsh="git push" \
-      gst="git status" \
-      gsa="git stash push" \
-      gsr="git stash pop" \
-      gst="git stash list" \
-      gd="git diff" \
-      gds="git diff --staged" \
-      gc="git commit -v" \
-      gca="git commit --amend" \
-      gcn="git commit --amend --no-edit"
+alias gs="git status -s"
+alias ga="git add"
+alias gco="git commit --verbose"
+alias gcm="git commit -m"
+alias gcall="git commit --verbose --all"
+alias gcoa="git commit --verbose --ammend"
+alias gd="git diff"
+alias gds="git diff --staged"
 
 # Directories
 # ===========
-alias cdc="echo $DOTFILES && cs $DOTFILES" \
-      cdn="cs $DOTFILES/nvim/.config/nvim" \
-      cc="cs /mnt/c" \
-      cdd="cs $HOME/dev" \
-      cdg="cs $HOME/dev/github" \
-      cdp="cs $HOME/dev/personal" \
-      cdb="cs $HOME/.local/bin" \
-      cdt="cs $HOME/dev/test"
+alias cdc="echo $DOTFILES && cd $DOTFILES && lsd"
+alias cdn="cd $DOTFILES/nvim/.config/nvim && lsd"
+alias cc="cd /mnt/c && lsd"
+alias cdd="cd $HOME/dev && lsd"
+alias cdg="cd $HOME/dev/github && lsd"
+alias cdp="cd $HOME/dev/personal && lsd"
+alias cdb="cd $HOME/.local/bin && lsd"
+alias cdt="cd $HOME/dev/test && lsd"
 
 # Files
 # =====
-alias cfa="$EDITOR $HOME/.config/shell/aliases" \
-      cfz="$EDITOR $ZDOTDIR/.zshrc" \
-      cfb="$EDITOR $HOME/.bashrc" \
-      cfe="$EDITOR $HOME/.zshenv"
+alias cfa="$EDITOR $HOME/.config/shell/aliases"
+alias cfz="$EDITOR $ZDOTDIR/.zshrc"
+alias cfb="$EDITOR $HOME/.bashrc"
+alias cfe="$EDITOR $HOME/.zshenv"
 
 # Functions
 # =========
@@ -68,20 +54,20 @@ alias cfa="$EDITOR $HOME/.config/shell/aliases" \
 # Show most frequently used commands
 #   Taken from:
 #       https://github.com/trimstray/the-book-of-secret-knowledge#tool-terminal
-histdata() {
-  history | \
-  awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | \
-  grep -v "./" | \
-  column -c3 -s " " -t | \
-  sort -nr | nl |  head -n 20
-}
+# histdata() {
+#   history | \
+#   awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | \
+#   grep -v "./" | \
+#   column -c3 -s " " -t | \
+#   sort -nr | nl |  head -n 20
+# }
 
 # Backup file
-back() { cp $1{,.backup}; }
+# back() { cp $1{,.backup}; }
 
 # Cd into a directory then list its contents
-cs() { cd "$1" && lsd; }
+# cs() { cd "$1" && lsd; }
 
 # Create a directory and cd into it
-mds() { mkdir "$1" && cd "$1"; }
+# mds() { mkdir "$1" && cd "$1"; }
 

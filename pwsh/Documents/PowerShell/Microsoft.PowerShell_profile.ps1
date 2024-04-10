@@ -13,11 +13,15 @@ Import-Module posh-git
 $aliases="$([Environment]::GetFolderPath("MyDocuments"))\PowerShell\Aliases.ps1"
 $private="$([Environment]::GetFolderPath("MyDocuments"))\PowerShell\Private.ps1"
 
-if (Test-Path -Path $aliases) {
+if (Test-Path -Path $aliases)
+{
   . $aliases
 }
 
-if (Test-Path -Path $private) {
+if (Test-Path -Path $private)
+{
   . $private
 }
 
+fnm env --use-on-cd | Out-String | Invoke-Expression
+Invoke-Expression (& { (zoxide init powershell | Out-String) })

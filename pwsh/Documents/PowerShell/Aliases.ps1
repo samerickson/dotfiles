@@ -3,7 +3,11 @@ $nvimconfig="$HOME\AppData\Local\nvim"
 $env:NVIM_CONFIG=$nvimconfig
 
 # Overrides
-Set-Alias ls -Value lsd
+Set-Alias ls -Value _ls
+
+function _ls {
+  eza --icons --group-directories-first $args
+}
 
 # Mock xargs
 filter xargs { & $args[0] ($args[1..$args.length] + $_) }
@@ -19,23 +23,10 @@ function sln {
 
 # Git helper functions
 function gs { git status }
-function ga { git add "$args" }
-function gap { git add -p }
-function gaa { git add --all }
-function gco { git commit --verbose }
-function gcm { git commit --verbose -m "$args" }
-function gcall { git commit --verbose --all }
-function gcoa { git commit --verbose --ammend "$args" }
-function gcb { git checkout -b "$args" }
-function gch { git checkout "$args[0]"; git pull }
-function gf { git fetch }
-function gpsh { git push }
-function gpl { git pull }
-function gssa { git stash save --all }
-function gss { git stash save "$args" }
-function gsl { git stash list }
-function gsps { git stash push }
-function gspo { git stash pop }
+function ga { git add $args }
+function gco { git commit --verbose $args }
+function gcm { git commit --verbose -m $args }
+function gcoa { git commit --verbose --amend $args }
 
 # Quickly edit common configuration files
 function cfs { nvim "$HOME\.starship\starship.toml" }

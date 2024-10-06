@@ -15,10 +15,11 @@ scripts that can be used to install and configure things when a simple symbolic 
 ## Windows Installation Notes
 
 ### Additional Dependencies
+
 There are a few packages that you need to install if you are on windows:
 
 1. As per [Delta Windows Usage Notes](https://dandavison.github.io/delta/tips-and-tricks/using-delta-on-windows.html), you may need to install a modern version of less
-  1. [https://github.com/jftuga/less-Windows/releases/latest](https://github.com/jftuga/less-Windows/releases/latest)
+1. [https://github.com/jftuga/less-Windows/releases/latest](https://github.com/jftuga/less-Windows/releases/latest)
 
 ### Windows Terminal Settings
 
@@ -26,9 +27,9 @@ I typically create multiple profiles that change depending on individual use cas
 configuration files here, but I always set the following appearance settings:
 
 - **Font:** [Deluga mono](https://github.com/adam7/delugia-code)
-    - Can be installed using [Chocolatey](https://chocolatey.org/install):
+  - Can be installed using [Chocolatey](https://chocolatey.org/install):
     `choco install nerd-fonts-delugiamono-complete`
-    - Can be installed using [Scoop](https://scoop.sh/):
+  - Can be installed using [Scoop](https://scoop.sh/):
     `scoop install Deluga-Mono-Nerd-Font-Complete`
 - **Color Scheme:** Default Campbell colors.
 - **Font Size**: 11
@@ -36,8 +37,12 @@ configuration files here, but I always set the following appearance settings:
 - **Background Opacity:** 86%
 - **Enable acrylic material:** False
 - **Padding:** False
+- Color scheme:
+  - [tokyonight-windows-terminal](https://github.com/jiyometrik/tokyonight-windows-terminal)
+  - [ayu-colors](https://github.com/ayu-theme/ayu-colors)
+    - [windows-terminal-ayu](https://gist.github.com/joshtynjala/10dbdd4e449027fe9723b1d9f553c0bd)
 
-I typlically create a dedicated run as administrator profile as the third profile so that I can use `Ctrl+shift+3` to
+I typically create a dedicated run as administrator profile as the third profile so that I can use `Ctrl+shift+3` to
 open a tab as administrator.
 
 ### Adding Symbolic links
@@ -68,4 +73,3 @@ requires a C compiler. You can install one by using the following command (provi
 ```bash
 choco install mingw
 ```
-

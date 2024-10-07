@@ -5,3 +5,4 @@ autoload
 shell/.config/shell/keybr.sh
 nvim/.config/nvim/lua/keybr.l
 pwsh/Documents/PowerShell/Modules/*
+

@@ -12,40 +12,6 @@ config.default_prog = { "pwsh.exe" }
 config.font = wezterm.font(font)
 config.font_size = 13
 
--- Color theme.
-local colors = {
-	bg = "#0E1419",
-	black = "#000000",
-	dark_lilac = "#6D5978",
-	lilac = "#BAA0E8",
-}
-config.color_scheme = "Dracula (Official)"
-config.colors = {
-	background = colors.bg,
-	tab_bar = {
-		inactive_tab_edge = colors.black,
-		active_tab = {
-			bg_color = colors.lilac,
-			fg_color = colors.black,
-		},
-		inactive_tab = {
-			bg_color = colors.black,
-			fg_color = colors.dark_lilac,
-		},
-		inactive_tab_hover = {
-			bg_color = colors.black,
-			fg_color = colors.lilac,
-		},
-		new_tab = {
-			bg_color = colors.bg,
-			fg_color = colors.lilac,
-		},
-		new_tab_hover = {
-			bg_color = colors.lilac,
-			fg_color = colors.black,
-		},
-	},
-}
 
 config.font_size = 13
 config.cell_width = 0.9
@@ -68,12 +34,6 @@ config.font_rules = {
 }
 
 config.front_end = "WebGpu"
-
-config.window_frame = {
-	font = wezterm.font(font, { weight = "DemiBold" }),
-	active_titlebar_bg = colors.bg,
-	inactive_titlebar_bg = colors.bg,
-}
 
 -- Color theme.
 local colors = {
@@ -114,6 +74,12 @@ config.command_palette_bg_color = colors.bg
 config.command_palette_fg_color = colors.lilac
 config.command_palette_font_size = 12
 config.command_palette_rows = 18
+
+config.window_frame = {
+	font = wezterm.font(font, { weight = "DemiBold" }),
+	active_titlebar_bg = colors.bg,
+	inactive_titlebar_bg = colors.bg,
+}
 
 -- Inactive panes.
 config.inactive_pane_hsb = {

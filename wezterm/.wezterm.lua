@@ -7,7 +7,7 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
-config.default_prog = { "pwsh.exe" }
+config.default_prog = { "nu" }
 
 config.font = wezterm.font(font)
 config.font_size = 13

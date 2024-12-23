@@ -23,6 +23,9 @@ $env.config.show_banner = false
 
 alias cdc = cd $env.DOTFILES
 alias cdn = cd $'($env.DOTFILES)/nvim/.config/nvim'
+alias cdr = cd $env.REPOS
+alias cdg = cd $env.GITHUB
+alias github = cd $env.GITHUB
 alias ls = eza
 alias lg = lazygit
 

@@ -1,5 +1,6 @@
 local wezterm = require("wezterm")
 local font = "Hasklug Nerd Font Mono"
+local act = wezterm.action
 
 local config = {}
 
@@ -114,12 +115,16 @@ end)
 config.window_decorations = "RESIZE"
 
 config.keys = {
-	{ mods = "CTRL", key = "w", action = wezterm.action.CloseCurrentPane({ confirm = true }) },
-	{ mods = "ALT", key = "1", action = wezterm.action.ActivateTab(0) },
-	{ mods = "ALT", key = "2", action = wezterm.action.ActivateTab(1) },
-	{ mods = "ALT", key = "3", action = wezterm.action.ActivateTab(2) },
-	{ mods = "ALT", key = "4", action = wezterm.action.ActivateTab(3) },
-	{ mods = "ALT", key = "5", action = wezterm.action.ActivateTab(4) },
+	{ mods = "CTRL", key = "w", action = act.CloseCurrentPane({ confirm = true }) },
+	{ mods = "ALT", key = "1", action = act.ActivateTab(0) },
+	{ mods = "ALT", key = "2", action = act.ActivateTab(1) },
+	{ mods = "ALT", key = "3", action = act.ActivateTab(2) },
+	{ mods = "ALT", key = "4", action = act.ActivateTab(3) },
+	{ mods = "ALT", key = "5", action = act.ActivateTab(4) },
+
+	-- I do not love this keybinding, but I want the clipboard manager from windows
+	-- with Win+V to work, and it sends uses your selection with CTRL+V
+	{ key = "v", mods = "CTRL", action = act.PasteFrom("Clipboard") },
 }
 
 return config

@@ -1,5 +1,9 @@
 # vim: ft=sh
 
+# Applications
+# ============
+alias lg="lazygit"
+
 # System management
 # =================
 alias mx="chmod +x"

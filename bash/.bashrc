@@ -18,3 +18,10 @@ eval "$(starship init bash)"
 eval "$(fnm env --use-on-cd)"
 eval "$(zoxide init bash)"
 . "$HOME/.cargo/env"
+
+# fnm
+FNM_PATH="/home/serickson/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi

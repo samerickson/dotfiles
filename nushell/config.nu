@@ -32,3 +32,5 @@ alias lg = lazygit
 source ~/.cache/zoxide/init.nu
 # source ~/.cache/starship/init.nu
 
+fnm env --json | from json | load-env
+$env.path = $env.path | append $env.FNM_MULTISHELL_PATH

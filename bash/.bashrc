@@ -1,27 +1,29 @@
-# If not running interactively, don't do anything
-case $- in
-*i*) ;;
-*) return ;;
-esac
-
-# fnm
 FNM_PATH="/home/samerickson/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
   eval "$(fnm env)"
 fi
 
-[ -f "$HOME/.zshenv" ] && source "$HOME/.zshenv"
-[ -f "$HOME/.config/shell/aliases" ] && source "$HOME/.config/shell/aliases"
+export BROWSER="wslview"
 
-eval "$(starship init bash)"
+[ -f "$HOME/.zshenv" ] && source "$HOME/.zshenv"
+
 eval "$(fnm env --use-on-cd)"
-eval "$(zoxide init bash)"
 . "$HOME/.cargo/env"
 
-# fnm
-FNM_PATH="/home/serickson/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="$FNM_PATH:$PATH"
-  eval "`fnm env`"
+# Do not go past this point if not running interactively
+case $- in
+*i*) ;;
+*) return ;;
+esac
+
+eval "$(zoxide init bash)"
+eval "$(starship init bash)"
+
+[ -f "$HOME/.config/shell/aliases" ] && source "$HOME/.config/shell/aliases"
+
+# load any xresrouce settings on login:
+if [ -e "$HOME/.Xresources" ]; then
+  # echo "Not loading xresource file"
+  xrdb -load "$HOME/.Xresources"
 fi

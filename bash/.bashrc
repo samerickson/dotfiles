@@ -11,31 +11,19 @@ export BROWSER="wslview"
 eval "$(fnm env --use-on-cd)"
 . "$HOME/.cargo/env"
 
-# Do not go past this point if not running interactively
-case $- in
-*i*) ;;
-*) return ;;
-esac
-
-eval "$(zoxide init bash)"
-eval "$(starship init bash)"
-
-[ -f "$HOME/.config/shell/aliases" ] && source "$HOME/.config/shell/aliases"
-
-. "$HOME/.cargo/env"
-
 # Do not execute past this point if not running interactively
 case $- in
 *i*) ;;
 *) return ;;
 esac
 
+eval "$(starship init bash)"
+eval "$(zoxide init bash)"
+
+[ -f "$HOME/.config/shell/aliases" ] && source "$HOME/.config/shell/aliases"
+
 # load any xresrouce settings on login:
 if [ -e "$HOME/.Xresources" ]; then
   # echo "Not loading xresource file"
   xrdb -load "$HOME/.Xresources"
 fi
-
-eval "$(starship init bash)"
-eval "$(fnm env --use-on-cd)"
-eval "$(zoxide init bash)"

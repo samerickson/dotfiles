@@ -1,3 +1,5 @@
+export HISTCONTROL=ignoreboth:erasedups
+
 FNM_PATH="/home/samerickson/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"

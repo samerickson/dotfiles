@@ -15,13 +15,14 @@ alias tmux="tmux -f $XDG_CONFIG_HOME/tmux/tmux.conf"
 alias vim="nvim"
 alias vi="nvim"
 alias tree="tree -I \"node_modules\""
-alias la="ls -a"
-alias ll="ls -la"
+alias la="eza -a --icons --git"
+alias ll="eza -la --icons --git"
+alias lt="eza --tree --level=2 --icons --git"
 
 # Adding colors
 # =============
 alias grep="grep --color=auto"
-alias ls="lsd"
+alias ls="eza --icons"
 
 # Git
 # ====

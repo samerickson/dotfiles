@@ -1,16 +1,15 @@
 export HISTCONTROL=ignoreboth:erasedups
 
-FNM_PATH="/home/samerickson/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="$FNM_PATH:$PATH"
-  eval "$(fnm env)"
-fi
-
 export BROWSER="wslview"
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+
+export PATH="$PATH:/dev/go/bin$NVM_DIR"
 
 [ -f "$HOME/.zshenv" ] && source "$HOME/.zshenv"
 
-eval "$(fnm env --use-on-cd)"
+# eval "$(fnm env --use-on-cd)"
 . "$HOME/.cargo/env"
 
 # Do not execute past this point if not running interactively
@@ -29,3 +28,5 @@ if [ -e "$HOME/.Xresources" ]; then
   # echo "Not loading xresource file"
   xrdb -load "$HOME/.Xresources"
 fi
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

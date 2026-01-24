@@ -7,7 +7,15 @@ alias lg="lazygit"
 # System management
 # =================
 alias mx="chmod +x"
-alias src=". ~/.zshenv && . $ZDOTDIR/.zshrc"
+# alias src=". ~/.zshenv && . $ZDOTDIR/.zshrc"
+
+src() {
+    if [ -n "$BASH" ]; then
+        source "$HOME/.bashrc"
+    elif [ -n "$ZSH_VERSION" ]; then
+        source "$HOME/.zshenv" && source "$ZDOTDIR/.zshrc"
+    fi
+}
 
 # Application modification
 # ========================

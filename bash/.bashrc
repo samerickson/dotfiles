@@ -6,6 +6,7 @@ esac
 
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
+eval "$(fzf --bash)"
 
 [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
 

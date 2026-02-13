@@ -7,6 +7,7 @@ case $- in
 *) return ;;
 esac
 
+. "$HOME/.cargo/env"
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 # eval "$(fzf --bash)"

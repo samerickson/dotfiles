@@ -7,3 +7,4 @@ nvim/.config/nvim/lua/keybr.l
 pwsh/Documents/PowerShell/Modules/*
 nushell/env.nu
 nushell/history.txt
+lazygit/.config/lazygit/state.yml

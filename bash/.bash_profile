@@ -15,6 +15,7 @@ export CXXFLAGS="--std=c++20"
 export EDITOR="nvim"
 export GOPATH="${HOME}/dev/go"
 export DOTFILES="${HOME}/dev/personal/dotfiles"
+export COLORTERM=truecolor
 
 export NVM_COMPLETION="false"
 export NVIM_CONFIG="${DOTFILES}/nvim/.config/nvim"

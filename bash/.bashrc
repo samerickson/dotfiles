@@ -8,7 +8,7 @@ eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 eval "$(fzf --bash)"
 
-[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh" --no-use
 
 [ -s "$HOME/.config/shell/aliases" ] && source "$HOME/.config/shell/aliases"
 . "$HOME/.cargo/env"

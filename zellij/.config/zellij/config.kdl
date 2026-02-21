@@ -276,7 +276,7 @@ load_plugins {
 //
 // theme "dracula"
 
-theme "kanagawa_wave"
+theme "kanagawa"
 
 // Choose the base input mode of zellij.
 // Default: normal

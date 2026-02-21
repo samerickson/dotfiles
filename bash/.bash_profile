@@ -1,23 +1,15 @@
-# load any xresrouce settings on login:
-if [ -e "$HOME/.Xresources" ]; then
-    # echo "Not loading xresource file"
-    xrdb -load "$HOME/.Xresources"
-fi
-
 export HISTCONTROL=ignoreboth:erasedups
 export BROWSER="wslview"
-export NVM_DIR="$HOME/.config/nvm"
 
-export PATH="$PATH:$HOME/dev/go/bin:$NVM_DIR:$HOME/.config/emacs/bin"
+export GOPATH="${HOME}/dev/go"
+export BUN_INSTALL="$HOME/.bun"
 
 # Attempting to npm install tree-sitter fails if this is not here
 export CXXFLAGS="--std=c++20"
 export EDITOR="nvim"
-export GOPATH="${HOME}/dev/go"
 export DOTFILES="${HOME}/dev/personal/dotfiles"
 export COLORTERM=truecolor
 
-export NVM_COMPLETION="false"
-export NVIM_CONFIG="${DOTFILES}/nvim/.config/nvim"
+export PATH="$PATH:$HOME/dev/go/bin:$HOME/.config/emacs/bin:$BUN_INSTALL/bin"
 
 [ -s "$HOME/.bashrc" ] && source "$HOME/.bashrc"

@@ -11,7 +11,7 @@ alias mx="chmod +x"
 
 src() {
     if [ -n "$BASH" ]; then
-        source "$HOME/.bashrc"
+        source "$HOME/.bash_profile"
     elif [ -n "$ZSH_VERSION" ]; then
         source "$HOME/.zshenv" && source "$ZDOTDIR/.zshrc"
     fi

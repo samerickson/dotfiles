@@ -10,6 +10,6 @@ export EDITOR="nvim"
 export DOTFILES="${HOME}/dev/personal/dotfiles"
 export COLORTERM=truecolor
 
-export PATH="$PATH:$HOME/dev/go/bin:$HOME/.config/emacs/bin:$BUN_INSTALL/bin"
+export PATH="$PATH:/usr/local/bin:$HOME/dev/go/bin:$HOME/.config/emacs/bin:$BUN_INSTALL/bin"
 
 [ -s "$HOME/.bashrc" ] && source "$HOME/.bashrc"

@@ -193,13 +193,6 @@ keybinding:
 os:
   editPreset: "nvim-remote"
 disableStartupPopups: false
-customCommands:
-  - key: "b"
-    command: "gh browse"
-    context: "files"
-  - key: "b"
-    command: 'gh browse "{{.SelectedLocalCommit.Sha}}"'
-    context: "commits"
 services: {}
 notARepository: skip
 promptToReturnFromSubprocess: true

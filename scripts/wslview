@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Open a URL or file in Windows default app
+if [[ -z "$1" ]]; then
+  echo "Usage: wslopen <path-or-url>"
+  exit 1
+fi
+
+target="$1"
+
+# If it looks like a file, convert path
+if [[ -e "$target" ]]; then
+  target="$(wslpath -w "$target")"
+fi
+
+explorer.exe "$target"

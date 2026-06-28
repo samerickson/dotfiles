@@ -1,5 +1,11 @@
 export HISTCONTROL=ignoreboth:erasedups
-export BROWSER="wslview"
+
+if [ -n "$WSL_DISTRO_NAME" ]; then
+    export BROWSER='/mnt/c/Windows/firefox.exe'
+else
+    export BROWSER='firefox'
+fi
+
 
 export GOPATH="${HOME}/dev/go"
 export BUN_INSTALL="$HOME/.bun"

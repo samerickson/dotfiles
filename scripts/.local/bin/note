@@ -101,11 +101,18 @@ new() {
     cat > "$FILE" <<EOF
 # $1
 
-
 EOF
     fi
 
     open_file "$FILE"
+}
+
+todos() {
+    if [[ "$1" == "pick" ]]; then
+        rg -n -g '*.md' '^\s*[-*+]\s+\[ \]' "$NOTE_DIR" | fzf --delimiter ':' --preview 'bat --color=always --highlight-line {2} {1}' | awk -F: '{print $1, "+" $2}' | xargs -r "$EDITOR"
+    else
+        rg -n -g '*.md' '^\s*[-*+]\s+\[ \]' "$NOTE_DIR"
+    fi
 }
 
 case "$1" in
@@ -117,8 +124,16 @@ case "$1" in
         shift
         new "$@"
         ;;
+    todos)
+        shift
+        todos "$@"
+        exit 0
+        ;;
     *)
-        echo "Usage: notes {daily}"
+        echo "Usage: notes <daily,new,todos>"
+        echo "      daily [today,yesterday,next]: open daily note"
+        echo "      new [note name]: create a new note by the supplied name"
+        echo "      todos [pick]: see unchecked todos in all notes"
         exit 1
         ;;
 esac

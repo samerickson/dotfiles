@@ -23,9 +23,9 @@ gui:
   commandLogSize: 8
   splitDiff: auto
 git:
-  pagers:
+  diffRenderers:
     - colorArg: always
-      pager: delta --dark --paging=never
+      command: delta --dark --paging=never
       useConfig: false
   commit:
     signOff: false
@@ -117,7 +117,6 @@ keybinding:
     diffingMenu: W
     diffingMenu-alt: <c-e>
     copyToClipboard: <c-o>
-    openRecentRepos: <c-r>
     submitEditorText: <enter>
     extrasMenu: "@"
     toggleWhitespaceInDiffView: <c-w>
@@ -173,7 +172,6 @@ keybinding:
     pasteCommits: V
     tagCommit: T
     checkoutCommit: <space>
-    resetCherryPick: <c-R>
     copyCommitAttributeToClipboard: "y"
     openLogMenu: <c-l>
     openInBrowser: o
